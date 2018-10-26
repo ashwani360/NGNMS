@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locators>
+<NC>
+<Username>id=user</Username>
+<Password>id=pass</Password>
+<Loginbutton>//*[@id="loginButton"]</Loginbutton>
+<Userinfo>//*[@id="gen_menu_6"]</Userinfo>
+<skipwarning>//a[text()='Continue']</skipwarning>
+</NC>
+<Siebel>
+<SiebelUsername>//*[@id="s_swepi_1"]</SiebelUsername>
+<SiebelPassword>id=s_swepi_2</SiebelPassword>
+<SiebelLoginbutton>//*[@id="s_swepi_22"]</SiebelLoginbutton>
+//<SiebelUserinfo>//*[@id="gen_menu_6"]</SiebelUserinfo>
+</Siebel>
+</locators>

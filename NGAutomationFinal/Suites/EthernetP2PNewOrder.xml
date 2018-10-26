@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="1" name="AllTests" annotations="JDK">
+	 <listeners>
+        <listener class-name="Listeners.TestListener"/>
+        
+    </listeners> 
+	<test name="Ethernet Point to Point Order New Orders" junit="false" preserve-order="true">
+		<classes>
+			<class name="Testscript.Login">	
+				<methods>
+					<include name="LoginonNetCreacker"/>
+					<exclude name="LoginonSiebel"/>
+				</methods>	
+			</class>
+			<class name="Testscript.AccountNavigation">	
+				<methods>
+					<include name="NavigatetoDocument"/>
+					<include name="NavigatetoAccount"/>
+					<exclude name="NavigatetoSiebelAccount"/>					
+				</methods>	
+			</class>
+			<class name="Testscript.CreateCompositOrder">	
+				<methods>
+					<include name="CreateAndProcess"/>
+				</methods>	
+			</class>
+		</classes>	
+	</test>
+</suite>
+

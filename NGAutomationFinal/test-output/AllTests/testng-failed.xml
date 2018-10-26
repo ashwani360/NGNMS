@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [AllTests]">
+  <listeners>
+    <listener class-name="Listeners.TestListener"/>
+  </listeners>
+  <test name="DC to DC Hub and Spoke Order completion(failed)">
+    <classes>
+      <class name="Testscript.AccountNavigation">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="setup"/>
+          <include name="BeforeSuite"/>
+          <include name="Teardown"/>
+        </methods>
+      </class> <!-- Testscript.AccountNavigation -->
+      <class name="Testscript.CreateHubOrder">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="HubCreateAndProcess" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Testscript.CreateHubOrder -->
+      <class name="Testscript.Login">
+        <methods>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- Testscript.Login -->
+    </classes>
+  </test> <!-- DC to DC Hub and Spoke Order completion(failed) -->
+</suite> <!-- Failed suite [AllTests] -->

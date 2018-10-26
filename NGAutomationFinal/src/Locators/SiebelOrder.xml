@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locators>
+<Accounts>//a[@data-tabindex='tabScreen2']</Accounts>
+<OCNfield>//input[@aria-label='Account Number(OCN)']</OCNfield>
+<GoButton>//span[text()='Go']</GoButton>
+<AccountName>//a[text()=' DC-XT Pte Ltd']</AccountName>
+<InstalledAssetNew>//*[@id="s_1_1_34_0_Ctrl"]</InstalledAssetNew>
+<OpportunityNo>//*[(@aria-labelledby='Opportunity_Number_Label')]</OpportunityNo>
+<RequestReceivedDate>//*[(@aria-label='Request Received Date')]</RequestReceivedDate>
+<DeliveryChannel>//*[(@aria-labelledby='COLT_Delivery_Channel_Label')]</DeliveryChannel>
+<OrderingPartySearch>//div[@class='mceGridField siebui-value mceField']//span[@id='s_2_1_61_0_icon']</OrderingPartySearch>
+<PartySearchPopupDropdown>//*[@class='siebui-popup-button']//*[@class='siebui-icon-dropdown applet-form-combo applet-list-combo']</PartySearchPopupDropdown>
+<PartyName>//*[@class='ui-menu-item'][text()='Party Name']</PartyName>
+<InputPartyname>//input[@aria-labelledby='PopupQuerySrchspec_Label']</InputPartyname>
+<PickAccntOk>//*[contains(@title,'Pick Account:OK')]</PickAccntOk>
+<OrderingParty>//*[(@aria-labelledby='Ordering_Party_Label')]</OrderingParty>
+<OrderingPartyAddrSearch>//div[@class='mceGridField siebui-value mceField']//span[@id='s_2_1_137_0_icon']</OrderingPartyAddrSearch>
+<OrderingPartyAddrSearchDropdown>//*[@class='siebui-popup-button']//*[@class='siebui-icon-dropdown applet-form-combo applet-list-combo']</OrderingPartyAddrSearchDropdown>
+<PartyAddr>//*[@class='ui-menu-item'][text()='Street Name']</PartyAddr>
+<InputPartyAddr>//input[@aria-labelledby='PopupQuerySrchspec_Label']</InputPartyAddr>
+<PickAddrSubmit>//button[@aria-label='Pick Address:OK']</PickAddrSubmit>
+<PickAccnt>//*[contains(@title,"13869")]</PickAccnt>
+<OrderingPartyContactSearch>//div[@class='mceGridField siebui-value mceField']//span[@id='s_2_1_31_0_icon']</OrderingPartyContactSearch>
+<PartyContactPopupDropdown>//*[@class='siebui-popup-button']//*[@class='siebui-icon-dropdown applet-form-combo applet-list-combo']</PartyContactPopupDropdown>
+<FirstName>//*[@class='ui-menu-item'][text()='First Name']</FirstName>
+<InputFirstname>//*[@aria-labelledby='PopupQuerySrchspec_Label']</InputFirstname>
+<FirstnameSubmit>//button[@aria-label='Pick Contact:OK']</FirstnameSubmit>
+<OrderingPartyAddr>//*[(@aria-labelledby='COLT_Ordering_Account_Address_Name_Label')]</OrderingPartyAddr>
+<PickAddr>//*[contains(@title,"666448")]</PickAddr>
+<PickAddrOk>//*[contains(@title,'Pick Address:OK')]</PickAddrOk>
+<OrderingPartyContact>//*[(@aria-labelledby='COLT_Ordering_Contact_Full_Name_Label')]</OrderingPartyContact>
+<PickContact>//*[contains(@title,"K0129557")]</PickContact>
+<PickContactOk>//*[contains(@title,'Pick Contact:OK')]</PickContactOk>
+<SalesChannel>//*[(@aria-labelledby='COLT_Sales_Channel_Label')]</SalesChannel>
+<NewServiceOrder>//*[(@aria-label='Line Items:New Service Order')]</NewServiceOrder>
+<AdddEthernetHub>//button[@id='addButton0']</AdddEthernetHub>
+<ServiceOrderReferenceNo>//a[@name='Order Number']</ServiceOrderReferenceNo>
+<Searchbutton>//span[@class='search_img']/img</Searchbutton>
+<StreetName>//input[@id='txtStreetName']</StreetName>
+<Country>//select[@class='ctrlClasstype'][@id='ddlCountry']</Country>
+<City>//input[@class='ctrlClasstype'][@id='txtCityTown']</City>
+<PostalCode>//input[@class='ctrlClasstype'][@id='txtPostalCode']</PostalCode>
+<Premises>//input[@class='ctrlClasstype'][@id='txtPremises']</Premises>
+<Search>//input[@value='Search']</Search>
+<PickAddress>//table[@id='address_table']/tbody/tr[2]</PickAddress>
+<Pick>//input[@value='Pick']</Pick>
+<PickBulding>//table[@id='address_table']/tbody/tr</PickBulding>
+<PickSite>//table[@id='address_table']/tbody/tr</PickSite>
+<ServicePartySearch>//img[@name="Service Party"]</ServicePartySearch>
+<SelectServiceParty>//select[@id='ddlSearchData']</SelectServiceParty>
+<InputServicePartyName>//input[@id="txtSearchInput"]</InputServicePartyName>
+<SearchServicePartyName>//img[@title="Search"][@id="imgSearchContactData"]</SearchServicePartyName>
+<PickServiceParty>//table[@id="address_table"]/tbody/tr[1]</PickServiceParty>
+<PickButton>//input[@value="Pick"][@id="PickAccount"]</PickButton>
+<SiteContactSearch>//img[@name="Site Contact"]</SiteContactSearch>
+<InputContactName>//input[@id="txtSearchInput"]</InputContactName>
+<SearchContactName>//img[@id="imgSearchContactData"]</SearchContactName>
+<PickContactName>//table[@id='address_table']/tbody/tr[1]</PickContactName>
+<PickContact>//input[@id="PickContact"]</PickContact>
+<SiteDetailCustomize>//button[@id="btnSiteCustom"][@data-lineid="1-1HQOZH7"]</SiteDetailCustomize>
+<CustomerSitePopStatus>//select[@class='siebui-ctrl-select '][@id="1-1HQOZH7`^~[ATTR[~^`1-155C41D`^~[DOMAINSELECT"]</CustomerSitePopStatus>
+<BuildingType>//select[@class='siebui-ctrl-select '][@id="1-1HQOZH7`^~[ATTR[~^`1-155C41C`^~[DOMAINSELECT"]</BuildingType>
+<CPEInformationLink>//a[text()='CPE Information'][@href="javascript:void(0);"]</CPEInformationLink>
+<CabinetType>//select[@id="1-1HQOZIK`^~[ATTR[~^`1-17NLU1R`^~[DOMAINSELECT"]</CabinetType>
+<CabinetId>//input[@id="GRPITEM[~^`1-1HQOZIK`^~[ATTR[~^`1-18RQ45L`^~[ATTTYPE[~^`TEXT"]</CabinetId>
+<AccessPortLink>//a[text()='Access Port'][@href="javascript:void(0);"]</AccessPortLink>
+<PortRole>//select[@id="1-1HQOZJ4`^~[ATTR[~^`1-17NLU0V`^~[DOMAINSELECT"]</PortRole>
+<PresentationInterfaceSearch>//img[@class="siebui-ctrl-img "]</PresentationInterfaceSearch>
+<PickPresentationInterface>//table[@summary="Select Presentation Interface-Connector Type"]/tbody/tr[2]</PickPresentationInterface>
+<SubmitPresentationInterface>//button[@data-display="OK"]</SubmitPresentationInterface>
+<EthernetHubLink>//a[text()='Ethernet Hub']</EthernetHubLink>
+<SelectServiceBandwidth>//select[@id="1-16E4WBV`^~[ATTR[~^`1-13QQVB5`^~[DOMAINSELECT"]</SelectServiceBandwidth>
+<SelectResilienceOption>//select[@id="1-16E4WBV`^~[ATTR[~^`1-155C549`^~[DOMAINSELECT"]</SelectResilienceOption>
+<EthernetConnectionLink>//a[text()="Ethernet Connection"][@href="javascript:void(0);"]</EthernetConnectionLink>
+<HubSiteLink>//a[text()="Hub Site"]</HubSiteLink>
+<AccessTechnologySearch>//div[@id="1-1HQOZH7`^~[ATTR[~^`1-155C41E"]//img[@class="siebui-ctrl-img "]</AccessTechnologySearch>
+<SelectAccessTechnology>//table[@summary="Select Access Technology"]/tbody/tr[2]</SelectAccessTechnology>
+<SubmitAccessTechnology>//button[@title="Select Access Technology:OK"]</SubmitAccessTechnology>
+<DoneEthernetConnection>//button[text()='Done']</DoneEthernetConnection>
+<OrderSubTypeSearch>//span[@id="s_4_1_61_0_icon"]</OrderSubTypeSearch>
+<AddOrderSubType>//button[@title="Service Order Sub Type:New"]</AddOrderSubType>
+<OrderSubTypeDropDown>//span[@id="s_7_2_61_0_icon"]</OrderSubTypeDropDown>
+<SelectNew>//li[text()='New']</SelectNew>
+<SubmitSubOrderType>//button[@title="Service Order Sub Type:OK"]</SubmitSubOrderType>
+<ContractSearch>//span[@id="s_4_1_13_0_icon"]</ContractSearch>
+<SelectContract>//table[@summary="Pick Contract"]/tbody/tr[2]</SelectContract>
+<SubmitContract>//button[@title="Pick Contract:OK"]</SubmitContract>
+<NetworkReferenceSearch>//span[@id="s_4_1_25_0_icon"]</NetworkReferenceSearch>
+<SelectNetworkReference>//table[@summary="Pick Network Reference"]/tbody/tr[2]</SelectNetworkReference>
+<SubmitNetworkReference>//button[@title="Pick Network Reference:OK"]</SubmitNetworkReference>
+<OrderDates>//a[text()='Order Dates']</OrderDates>
+<OrderSignedDate>//input[@aria-label="Order Signed Date"]</OrderSignedDate>
+<ColtActualDate>//input[@aria-labelledby="COLT_Actual_RFS_Date_Label"]</ColtActualDate>
+<OrderReceivedDate>//input[@aria-labelledby="COLT_Order_Received_Date_Label"]</OrderReceivedDate>
+<Billing>//a[text()='Billing']</Billing>
+<ExpandAllButton>//button[@title="Service Charges:Expand All"]</ExpandAllButton>
+<InstallationChargeNRC>//input[@aria-labelledby="2_s_6_l_COLT_Bill_Text  s_6_l_altCalc"]</InstallationChargeNRC>
+<RecurringChargeMRC>//input[@aria-labelledby="4_s_6_l_COLT_Bill_Text  s_6_l_altCalc"]</RecurringChargeMRC>
+<BCNInstallationChargeNRC>//input[@aria-labelledby="2_s_6_l_COLT_Bill_Text  s_6_l_altpick"]</BCNInstallationChargeNRC>
+<BCNRecurringChargeMRC>//input[@aria-labelledby="4_s_6_l_COLT_Bill_Text  s_6_l_altpick"]</BCNRecurringChargeMRC>
+<OrderStatusDropdown>//span[@id="s_4_1_345_0_icon"]</OrderStatusDropdown>
+<SelectTechnicalValidation>//li[text()='Technical Validation']</SelectTechnicalValidation>
+<BDWREVWCheckbox></BDWREVWCheckbox>
+<TriggerTRButton></TriggerTRButton>
+<PrimaryTestCompleted></PrimaryTestCompleted>
+<ExistingCapacity></ExistingCapacity>
+<SubmitTechnicalOrder></SubmitTechnicalOrder>
+
+
+</locators>

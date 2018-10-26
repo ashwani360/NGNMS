@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locators>
+<Topnavegation>//*[@id='gen_menu_3']</Topnavegation>
+<Submenu>//span[text()='Documents']/parent::*</Submenu>
+<Customertype>//span[text()='COLT OM Customers']/parent::*</Customertype>
+<Customername>//span[text()='ZZZZ UK TEST']/parent::*</Customername>
+<SiebelAccounts>//*[text()='Accounts']/parent::*</SiebelAccounts>
+<SiebelOCN>//*[text()='Account Number(OCN)']/parent::*/following-sibling::*//input</SiebelOCN>
+<SiebelAccountGo>//*[text()='Go']/parent::*</SiebelAccountGo>
+<SiebelCustomerName>//*[contains(@title,'ZZZZ ES TEST')]</SiebelCustomerName>
+</locators>

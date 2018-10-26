@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="1" name="AllTests" annotations="JDK">
+	 <listeners>
+        <listener class-name="Listeners.TestListener"/>
+        
+    </listeners> 
+	<test name="DC to DC Order completion" junit="false" preserve-order="true">
+		<classes>
+			<class name="Testscript.Login">	
+				<methods>
+					<include name="LoginonNetCreacker"/>
+					<exclude name="LoginonSiebel"/>
+				</methods>	
+			</class>
+			<class name="Testscript.AccountNavigation">	
+				<methods>
+					<include name="NavigatetoDocument"/>
+					<include name="NavigatetoAccount"/>
+					<exclude name="NavigatetoSiebelAccount"/>					
+				</methods>	
+			</class>
+			<class name="Testscript.CreateHubOrder">	
+				<methods>
+					<include name="HubCreateAndProcess"/>
+				</methods>	
+			</class>
+		</classes>	
+	</test>
+	<!--  <test name="Siebel DC to DC Order completion" junit="false" preserve-order="true">
+		<classes>
+			<class name="Testscript.SiebelOrder">	
+				<methods>
+					<exclude name="CreateOrder"/>
+				</methods>	
+			</class>
+		</classes>	
+	</test>-->
+</suite>
+

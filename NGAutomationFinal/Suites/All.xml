@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="allSuites">
+  <suite-files>
+    <suite-file path="EthernetP2PNewOrder.xml" />
+    <suite-file path="HubAndSpokeNewOrder.xml" />
+  </suite-files>
+</suite>

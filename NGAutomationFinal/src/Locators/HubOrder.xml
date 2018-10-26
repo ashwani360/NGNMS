@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locators>
+<OrderNumber>//td[@id='vv_-1']/span</OrderNumber>
+<LinkforOrder>//a[contains(text(),'Order #')]</LinkforOrder>
+<NewCompositeOrder>//a[text()='New Composite Order']</NewCompositeOrder>
+<OrderDescription>//*[@name='common_descr']</OrderDescription>
+<Update>//a[text()='Update']</Update>
+<UpdateSerialNumber>//a[text()='Update Serial Number']</UpdateSerialNumber>
+<OrderTab>//a[text()='Orders']</OrderTab>
+<AddonOrderTab>//a[text()='Add']</AddonOrderTab>
+<Productifram>//iframe[@id='linkage']</Productifram>
+<HubProductCheckBox>//a[text()='Hub Product']/parent::*/parent::*/parent::*/parent::*/td//input</HubProductCheckBox>
+<EthernetProductCheckBox>//a[text()='Ethernet Connection Product']/parent::*/parent::*/parent::*/parent::*/td//input</EthernetProductCheckBox>
+<Addbutton>//button[text()='Add']</Addbutton>
+<UnderlyningOrder>//span[contains(text(),'Ethernet Connection')]/parent::a</UnderlyningOrder>
+<UnderlyningHubOrder>//span[contains(text(),'Hub Product Order')]/parent::a</UnderlyningHubOrder>
+<Edit>//a[text()='Edit']</Edit>
+<NetworkReference>//td/a[text()='Network Reference']/parent::*/following-sibling::*//input</NetworkReference>
+<OrderSystemName>//td/a[text()='Order System']/parent::*/following-sibling::*//select</OrderSystemName>
+<Orderreferencenumber>//td/a[text()='Order System Service ID']/parent::*/following-sibling::*//input</Orderreferencenumber>
+<Topology>//td/a[text()='Topology']/parent::*/following-sibling::*//select</Topology>
+<Ordernumber>//td/a[text()='Order Number']/parent::*/following-sibling::*//input</Ordernumber>
+<CommercialProductName>//td/a[text()='Commercial Product Name']/parent::*/following-sibling::*//input</CommercialProductName>
+<CircuitCategory>//td/a[text()='Circuit Category']/parent::*/following-sibling::*//select</CircuitCategory>
+<ServiceBandwidth>//td/a[text()='Service Bandwidth']/parent::*/following-sibling::*//input[@type='text']</ServiceBandwidth>
+<ResilienceOption>//td/a[text()='Resilience Option']/parent::*/following-sibling::*//select</ResilienceOption>
+<Accountbredcrumb>//a[@class=' path_pri txt_separator path_prev_item']</Accountbredcrumb>
+<AccountNameSorting>//a[text()='Name']</AccountNameSorting>
+<StartProccessing>//a[text()='Start Processing']</StartProccessing>
+<GeneralInformation>
+<GeneralInformationTab>//a[text()='General Information']</GeneralInformationTab>
+<AddFeaturelink>//a[text()='Add Feature']</AddFeaturelink>
+<TypeofFeature>//a[text()='Add Feature']/following-sibling::*//textarea</TypeofFeature>
+<SelectFeature>//input[@value='Select']</SelectFeature>
+</GeneralInformation>
+<Suborder>//a/span[contains(text(),'New Ethernet Connection Product Order #')]/parent::*/parent::*/parent::*/td//input</Suborder>
+<HubSuborder>//a/span[contains(text(),'Hub Product Order #')]/parent::*/parent::*/parent::*/td//input</HubSuborder>
+<Decompose>//a[text()='Decompose']</Decompose>
+<NewEthernetConnProduct>(//a/span[contains(text(),"New Ethernet Connection Product")])/parent::*</NewEthernetConnProduct>
+<AddHub>//a[text()='Add Hub']</AddHub>
+<TypeofHub>//a[text()='Add Hub']/following-sibling::*//textarea</TypeofHub>
+<AddHubProdOrder>//img[@alt='New/Modify Hub Product Order']/following-sibling::div[1]</AddHubProdOrder>
+<NewHubSiteProductend>(//a/span[contains(text(),"New Hub Site Product")])/parent::*</NewHubSiteProductend>
+<NewEndSiteProductAend>//td[text()='Entering']/parent::*/td/a</NewEndSiteProductAend>
+<NewEndSiteProductBend>(//a/span[contains(text(),"New End Site Product")])[2]/parent::*</NewEndSiteProductBend>
+<SiteProductDetail>
+<AccessTechnolgy>//td/a[text()='Access Technology']/parent::*/following-sibling::*//select</AccessTechnolgy>
+<AccessType>//td/a[text()='Access Type']/parent::*/following-sibling::*//select</AccessType>
+<SiteEnd>//td/a[text()='Site End']/parent::*/following-sibling::*//select</SiteEnd>
+<SiteID>//td/a[text()='Site ID']/parent::*/following-sibling::*//input</SiteID>
+<Accessport>
+<AccessPortLink>//span[text()='Access Port']/parent::*</AccessPortLink>
+<PresentConnectType>//td/a[text()='Presentation Connector Type']/parent::*/following-sibling::*//select</PresentConnectType>
+<AccessportRole>//td/a[text()='Port Role']/parent::*/following-sibling::*//select</AccessportRole>
+<VlanTaggingMode>//td/a[text()='VLAN Tagging Mode']/parent::*/following-sibling::*//select</VlanTaggingMode>
+</Accessport>
+<CPE>
+<CPElink>//span[text()='CPE Information']/parent::*</CPElink>>
+<CabinateType>//td/a[text()='Cabinet Type']/parent::*/following-sibling::*//select</CabinateType>
+<CabinateID>//td/a[text()='Cabinet ID']/parent::*/following-sibling::*//input</CabinateID>
+</CPE>
+<VLAN>
+<VLANLink>//span[text()='VLAN']/parent::*</VLANLink>
+<VlanTagId>//td/a[text()='VLAN Tag ID']/parent::*/following-sibling::*//input</VlanTagId>
+<Ethertype>//*[text()[contains(.,'Ethertype')]]/parent::*/following-sibling::*</Ethertype>
+</VLAN>
+</SiteProductDetail>
+<Tasks>
+<TaskTab>//a[text()='Tasks']</TaskTab>
+<ExecutionFlowlink>//a[text()='Execution Flow']/parent::*/following-sibling::*//a[2]</ExecutionFlowlink>
+<Workitems>//a[text()='Work Items']</Workitems>
+<TaskTitle>//div[@id='user-task-context']//span[contains(text(),'[New]')]</TaskTitle>
+<ActivationTaskCofirm>//span[text()='Activation Start Confirmation [New]']/parent::*</ActivationTaskCofirm>
+<TaskReadytoComplete>//td[text()='Ready']/parent::*/td//a</TaskReadytoComplete>
+<AccessNetworkElement>//td/a[text()='Access Network Element']/parent::*/following-sibling::*//input[@type='text']</AccessNetworkElement>
+<AccessPort>//td/a[text()='Access Port']/parent::*/following-sibling::*//input[@type='text']</AccessPort>
+<Complete>//a[@tooltip='Complete']</Complete>
+<WorkItemSelect>//a/span[contains(text(),'Reserve Access Resources')]/parent::*/parent::*/parent::*/td//input</WorkItemSelect>
+<View>//a[text()='View']</View>
+<NCSID>//td/a[text()='NC Service ID']/parent::*/following-sibling::*[1]</NCSID>
+<Errors>//a[text()='Errors']</Errors>
+<LegacyCpeProfile>//*[text()='Legacy CPE Profile']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeProfile>
+<LegacyCpeOamLevel>//*[text()='Legacy CPE OAM Level']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeOamLevel>
+<LegacyCpeSupportsCFM>//*[text()='Legacy CPE supports CFM']/parent::*/following-sibling::*//select</LegacyCpeSupportsCFM>
+</Tasks>
+<TransComplete>//a[text()='Complete']</TransComplete>
+</locators>
