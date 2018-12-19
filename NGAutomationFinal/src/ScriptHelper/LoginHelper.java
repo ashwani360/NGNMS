@@ -37,14 +37,14 @@ public class LoginHelper extends DriverHelper{
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Enter Password");
 		
 		Clickon(getwebelement(xml.getlocator("//locators/"+Application+"/Loginbutton")));
-		ExtentTestManager.getTest().log(LogStatus.PASS, " Steps: Click on Login Button");
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Login Button");
 		
 	}
 	
 	public void VerifySuccessLogin(String application) throws Exception
 	{	
 		Assert.assertEquals(Getkeyvalue(application+"_LoggedinUser").contains(Gettext(getwebelement(xml.getlocator("//locators/"+application+"/Userinfo")))),true);
-		ExtentTestManager.getTest().log(LogStatus.PASS, " Steps: Verify Correct user has been logged in");
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Verify Correct user has been logged in");
 		
 	}
 	
@@ -52,7 +52,8 @@ public class LoginHelper extends DriverHelper{
 	public void SkipWarning(String application) throws Exception, DocumentException
 	{
 		Clickon(getwebelement(xml.getlocator("//locators/"+application+"/skipwarning")));
-		ExtentTestManager.getTest().log(LogStatus.PASS, " Steps: Click on countinue to skip the timezone warning");
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on continue to skip the timezone warning");
+		
 	}
 
 //---------------------------------
@@ -61,15 +62,15 @@ public class LoginHelper extends DriverHelper{
 	{
 		openurl(Application);
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Navigated to "+Application+" Login Page");
-		
+		Thread.sleep(10000);
 		SendKeys(getwebelement(xml.getlocator("//locators/"+Application+"/SiebelUsername")),Getkeyvalue(Application+"_Username"));
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Enter User Name");
-		
+		Thread.sleep(2000);
 		SendKeys(getwebelement(xml.getlocator("//locators/"+Application+"/SiebelPassword")),Getkeyvalue(Application+"_Password"));
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Enter Password");
-		
+		Thread.sleep(5000);
 		Clickon(getwebelement(xml.getlocator("//locators/"+Application+"/SiebelLoginbutton")));
-		ExtentTestManager.getTest().log(LogStatus.PASS, " Steps: Click on Login Button");
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Login Button");
 		
 	}
 	
