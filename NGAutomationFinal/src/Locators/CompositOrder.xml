@@ -14,6 +14,7 @@
 <Edit>//a[text()='Edit']</Edit>
 <OrderSystemName>//td/a[text()='Order System']/parent::*/following-sibling::*//select</OrderSystemName>
 <Orderreferencenumber>//td/a[text()='Order System Service ID']/parent::*/following-sibling::*//input</Orderreferencenumber>
+<Networkreference>//td/a[text()='Network Reference']/parent::*/following-sibling::*//input</Networkreference>
 <Topology>//td/a[text()='Topology']/parent::*/following-sibling::*//select</Topology>
 <Ordernumber>//td/a[text()='Order Number']/parent::*/following-sibling::*//input</Ordernumber>
 <CommercialProductName>//td/a[text()='Commercial Product Name']/parent::*/following-sibling::*//input</CommercialProductName>
@@ -47,6 +48,11 @@
 <CabinateType>//td/a[text()='Cabinet Type']/parent::*/following-sibling::*//select</CabinateType>
 <CabinateID>//td/a[text()='Cabinet ID']/parent::*/following-sibling::*//input</CabinateID>
 </CPE>
+<VLAN>
+<VLANLink>//span[text()='VLAN']/parent::*</VLANLink>
+<VlanTagId>//td/a[text()='VLAN Tag ID']/parent::*/following-sibling::*//input</VlanTagId>
+<Ethertype>//*[text()[contains(.,'Ethertype')]]/parent::*/following-sibling::*</Ethertype>
+</VLAN>
 </SiteProductDetail>
 <Accountbredcrumb>//a[@class=' path_pri txt_separator path_prev_item']</Accountbredcrumb>
 <TransportCfs>//a[starts-with(@tooltip,'New Transport CFS Order')]</TransportCfs>
@@ -66,12 +72,15 @@
 <PePort>//*[text()='PE Port']/parent::*/following-sibling::*//input[@type='text']</PePort>
 <VCXController>//*[text()='VCX Controller']/parent::*/following-sibling::*//input[@type='text']</VCXController>
 <OAMProfile>//*[text()='OAM Profile']/parent::*/following-sibling::*//input[@type='text']</OAMProfile>
+<ANTSerialNumber>//td/span[contains(text(),'New ANT')]</ANTSerialNumber>
 <SerialTaskName>//td/a[text()='Name']/parent::*/following-sibling::*</SerialTaskName>
 <UpdateAntSerialNumber>//a[text()='Update ANT Serial Number']</UpdateAntSerialNumber>
 <UpdateSerialNumber>//a[text()='Update Serial Number']</UpdateSerialNumber> 
 <Beacon>//*[text()='Beacon']/parent::*/following-sibling::*//input[@type='text']</Beacon>
 <EthernetLinkTransportRFS_1>(//span[text()='Ethernet Link Transport RFS']/parent::*)[1]</EthernetLinkTransportRFS_1>
 <EthernetLinkTransportRFS_2>(//span[text()='Ethernet Link Transport RFS']/parent::*)[2]</EthernetLinkTransportRFS_2>
+<LegacyCpeProfile>//*[text()='Legacy CPE Profile']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeProfile> 
+<LegacyCpeOamLevel>//*[text()='Legacy CPE OAM Level']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeOamLevel>
 <Complete>//a[@tooltip='Complete']</Complete>
 <TransComplete>//a[text()='Complete']</TransComplete>
 <WorkItemSelect>//a/span[contains(text(),'Reserve Access Resources')]/parent::*/parent::*/parent::*/td//input</WorkItemSelect>
