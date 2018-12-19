@@ -1,13 +1,10 @@
 package ScriptHelper;
 
 import org.dom4j.DocumentException;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import com.relevantcodes.extentreports.LogStatus;
-
 import Driver.DriverHelper;
 import Driver.xmlreader;
 import Reporter.ExtentTestManager;
@@ -53,24 +50,35 @@ public class LoginHelper extends DriverHelper{
 	{
 		Clickon(getwebelement(xml.getlocator("//locators/"+application+"/skipwarning")));
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on continue to skip the timezone warning");
+		
 	}
 
 //---------------------------------
-	
+//Code for Login	
 	public void SiebelLogin(String Application) throws Exception
 	{
 		openurl(Application);
-		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Navegated to "+Application+" Login Page");
-		
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Navigated to "+Application+" Login Page");
+		Thread.sleep(10000);
 		SendKeys(getwebelement(xml.getlocator("//locators/"+Application+"/SiebelUsername")),Getkeyvalue(Application+"_Username"));
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Enter User Name");
-		
+		Thread.sleep(2000);
 		SendKeys(getwebelement(xml.getlocator("//locators/"+Application+"/SiebelPassword")),Getkeyvalue(Application+"_Password"));
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Enter Password");
-		
+		Thread.sleep(5000);
 		Clickon(getwebelement(xml.getlocator("//locators/"+Application+"/SiebelLoginbutton")));
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Login Button");
 		
 	}
-	
+
+//Code for Logout	
+		public void SiebelLogout(String Application) throws Exception
+		{
+			Clickon(getwebelement(xml.getlocator("//locators/"+Application+"/AccountSettingButton")));
+			ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Account Button");
+
+			Clickon(getwebelement(xml.getlocator("//locators/"+Application+"/Logout")));
+			ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Logout Button");
+			
+		}	
 }
