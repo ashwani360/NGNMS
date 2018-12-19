@@ -40,6 +40,12 @@
 <LinkforOrder>//a[contains(text(),'Order #')]</LinkforOrder>
 <DisconnectOrder>//span[contains(text(),'Disconnect Ethernet Connection Product Order')]/parent::a</DisconnectOrder>
 <DisconnectHubOrder>//span[contains(text(),'Disconnect Hub Product Order')]/parent::a</DisconnectHubOrder>
+<Scheduler>//a[text()='Scheduler']</Scheduler>
+<Errors>//a[text()='Errors']</Errors>
+<TaskReadytoComplete>//td[text()='Ready']/parent::*/td//a</TaskReadytoComplete>
+<TaskTitle>//div[@id='user-task-context']//span[contains(text(),'[New]')]</TaskTitle>
+<DisconnectTaskTitle>//div[@id='user-task-context']//span[contains(text(),'[Disconnect]')]</DisconnectTaskTitle>
+<Complete>//a[@tooltip='Complete']</Complete>
 </locators>
 
 
