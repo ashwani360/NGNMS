@@ -4,25 +4,29 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.ITest;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import Listeners.TestListener;
 import ScriptHelper.AccountNavigationHelper;
-import ScriptHelper.CeaseOrderHelper;
 import ScriptHelper.CompositeOrderHelper;
 import ScriptHelper.LoginHelper;
-import ScriptHelper.ModifyOrderHelper;
 import ScriptHelper.NewHubOrderHelper;
+import ScriptHelper.SiebelCeaseOrderHelper;
+import ScriptHelper.ModifyOrderHelper;
+import ScriptHelper.CeaseOrderHelper;
+import ScriptHelper.CarNorOrderHelper;
 import ScriptHelper.SiebelOrderHelper;
+import ScriptHelper.SiebelModifyHelper;
+import ScriptHelper.SiebelNcIntegrationHelper;
 
 public class DriverTestcase {
 	
@@ -30,39 +34,113 @@ public class DriverTestcase {
 	
 	public static LoginHelper Login;
 	public static AccountNavigationHelper NavigationHelper;
+//	public static AccountNavigationHelper SiebelNavigationHelper;
 	public static CompositeOrderHelper CompositeOrderhelper;
-	public static AccountNavigationHelper SiebelNavigationHelper;
-	public static SiebelOrderHelper SiebelOrderhelper;
 	public static NewHubOrderHelper NewHubOrderhelper;
 	public static ModifyOrderHelper ModifyOrderhelper;
 	public static CeaseOrderHelper CeaseOrderhelper;
+	public static CarNorOrderHelper CarNorOrderhelper;
+	public static SiebelOrderHelper SiebelOrderhelper;
+	public static SiebelModifyHelper SiebelModifyhelper;
+	public static SiebelCeaseOrderHelper SiebelCeaseOrderhelper;
+	public static SiebelNcIntegrationHelper SiebelNcIntegrationHelper;
+	public static TestListener Testlistener;
+	public static String CircuitRefnumber;
+	public static String ModifiedCircuitRefnumber;
+	public static String ModifiedSiebelOrdernumber;
 	public ThreadLocal<String> TestName=new ThreadLocal(); 
 	public static int  itr;
 	@BeforeMethod
-	   public void BeforeMethod(Method method,ITestContext ctx) throws IOException{
+	   public void BeforeMethod(Method method,ITestContext ctx,Object[] data) throws IOException{
 	 
 	 
-	 
-	//System.out.println("Index is:"+itr+"Length od data is:"+data.length);
+		Object[] st = null;
+		
+		try 
+		
+		{
+	 	st=(Object[]) data[0];
+		}
+		catch(Exception e)
+		{
+			st=new Object[][] {{""}};
+		}
+	//Log.info("Index is:"+itr+"Length od data is:"+data.length);
 	      if(method.getName().equals("CreateAndProcess"))
 	      {
-   		DataReader dt=new DataReader();
-   		Object[][] data=dt.datareader();
-	     Object[] st= (Object[]) data[itr][0];
-	     System.out.println(st[st.length-2].toString());
-	      ctx.setAttribute("testName", st[st.length-2].toString());
+//	   		DataReader dt=new DataReader();
+//	   		Object[][] data=dt.datareader();
+//		    Object[] st= (Object[]) data[itr][0];
+		    Log.info(st[st.length-2].toString());
+		    ctx.setAttribute("testName", st[st.length-2].toString());
 	      }
 	    else if(method.getName().equals("HubCreateAndProcess"))
 	      {
-    	DataReader dt=new DataReader();
-    	Object[][] data=dt.hubreader();
-	     Object[] st= (Object[]) data[itr][0];
-	     System.out.println(st[st.length-2].toString());
-	      ctx.setAttribute("testName", st[st.length-2].toString());
+//	    	DataReader dt=new DataReader();
+//	    	Object[][] data=dt.hubreader();
+//		    Object[] st= (Object[]) data[itr][0];
+		    Log.info(st[st.length-2].toString());
+	    	ctx.setAttribute("testName", st[st.length-2].toString());
+	      }
+	    else if(method.getName().equals("ModfiyAndProcess"))
+	      {
+//		    DataReader dt=new DataReader();
+//		    Object[][] data=dt.modreader();
+//		    Object[] st= (Object[]) data[itr][0];
+		    Log.info(st[st.length-2].toString());
+		    ctx.setAttribute("testName", st[st.length-2].toString());
+	      }
+//	    else if(method.getName().equals("InflightCreateAndProcess"))
+//	      {
+//		    DataReader dt=new DataReader();
+//		    Object[][] data=dt.inmodreader();
+//		    Object[] st= (Object[]) data[itr][0];
+//		    Log.info(st[st.length-2].toString());
+//		    ctx.setAttribute("testName", st[st.length-2].toString());
+//	      }	
+	    else if(method.getName().equals("CarNorCreateAndProcess"))
+	      {
+//		    DataReader dt=new DataReader();
+//		    Object[][] data=dt.carnorreader();
+//		    Object[] st= (Object[]) data[itr][0];
+		    Log.info(st[st.length-2].toString());
+		    ctx.setAttribute("testName", st[st.length-2].toString());
+	      }		      
+	    else if(method.getName().equals("CeaseAndProcess"))
+	      {
+//		    DataReader dt=new DataReader();
+//		    Object[][] data=dt.ceasereader();
+//		    Object[] st= (Object[]) data[itr][0];
+		    Log.info(st[st.length-2].toString());
+		    ctx.setAttribute("testName", st[st.length-2].toString());
+	      }
+//	    else if(method.getName().equals("CreateP2POrder"))
+//	      {
+//		    DataReader dt=new DataReader();
+//		    Object[][] data=dt.siebelreader();
+//		    Object[] st= (Object[]) data[itr][0];
+//		    Log.info(st[st.length-2].toString());
+//		    ctx.setAttribute("testName", st[st.length-2].toString());
+//	      }
+	    else if(method.getName().equals("SiebelModfiyAndProcess"))
+	      {
+//		    DataReader dt=new DataReader();
+//		    Object[][] data=dt.siebelmodifyreader();
+//		    Object[] st= (Object[]) data[itr][0];
+		    Log.info(st[st.length-2].toString());
+		    ctx.setAttribute("testName", st[st.length-2].toString());
+	      }
+	    else if(method.getName().equals("CreateOrder"))
+	      {
+//		    DataReader dt=new DataReader();
+//		    Object[][] data=dt.siebelceasereader();
+//		    Object[] st= (Object[]) data[itr][0];
+		    Log.info(st[st.length-2].toString());
+		    ctx.setAttribute("testName", st[st.length-2].toString());
 	      }
 	    else
-	      ctx.setAttribute("testName", method.getName());
-	      System.out.println(ctx.getAttribute("testName"));
+	    	ctx.setAttribute("testName", method.getName());
+	      	Log.info(ctx.getAttribute("testName").toString());
 	}
 
 
@@ -74,7 +152,7 @@ public class DriverTestcase {
 		PropertyReader pr=new PropertyReader();
 		String targatedbrowser=pr.readproperty("browser");
 		String url=pr.readproperty("URL");
-		System.out.println("URL");
+		Log.info("URL");
 		if(targatedbrowser.equals("chrome"))
 		{ 
 			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
@@ -92,34 +170,41 @@ public class DriverTestcase {
 		}
 		else if (targatedbrowser.equals("ie"))
 		{
-			System.out.println("For IE inprogress");
+			Log.info("For IE inprogress");
 		}
 		
 		else
 		{
-			System.out.println("For FF inprogress");
+			Log.info("For FF inprogress");
 		}
 		
 		dr.manage().window().maximize();
 		Login=new LoginHelper(getwebdriver());
 		NavigationHelper= new AccountNavigationHelper(getwebdriver());
 		CompositeOrderhelper=new CompositeOrderHelper(getwebdriver());
-		SiebelNavigationHelper= new AccountNavigationHelper(getwebdriver());
+//		SiebelNavigationHelper= new AccountNavigationHelper(getwebdriver());
 		SiebelOrderhelper=new SiebelOrderHelper(getwebdriver());
+		SiebelModifyhelper=new SiebelModifyHelper(getwebdriver());
 		NewHubOrderhelper=new NewHubOrderHelper(getwebdriver());
 		ModifyOrderhelper=new ModifyOrderHelper(getwebdriver());
 		CeaseOrderhelper= new CeaseOrderHelper(getwebdriver());
+		CarNorOrderhelper=new CarNorOrderHelper(getwebdriver());
+		SiebelNcIntegrationHelper=new SiebelNcIntegrationHelper(getwebdriver());
+		SiebelCeaseOrderhelper=new SiebelCeaseOrderHelper(getwebdriver());
+
 	}
 
 	@org.testng.annotations.BeforeSuite
 	public void BeforeSuite(){
-	itr=0;
+	//itr=0;
+	DOMConfigurator.configure("log4j.xml");
 	}
 	
 	@AfterTest
 	public void Teardown()
 	{
-		//dr.close();
+		
+//		dr.close();
 	}
 	public WebDriver getwebdriver() {
 		return dr;
