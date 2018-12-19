@@ -20,7 +20,7 @@ public String getlocator(String nodepath) throws DocumentException
 	SAXReader xmlreader=new SAXReader();
 	Document doc=xmlreader.read(Inputfile);
 	locator=doc.selectSingleNode(nodepath).getText();
-	//System.out.println(locator);
+	//Log.info(locator);
 	return locator;
 	
 }
