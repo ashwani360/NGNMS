@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locators>
 <OrderNumber>//td[@id='vv_-1']/span</OrderNumber>
+<NameFiltering>//a[contains(text(),'Name')]/parent::*/following-sibling::*</NameFiltering>
+<FilterSelectName>//td/select[@class='inputs']</FilterSelectName>
+<FilterInputValue>//div/input[@class='inputs']</FilterInputValue>
+<ApplyButton>//*[@class='FilterButtons'] //*[text()='Apply']</ApplyButton>
 <LinkforOrder>//a[contains(text(),'Order #')]</LinkforOrder>
 <NewCompositeOrder>//a[text()='New Composite Order']</NewCompositeOrder>
+<Ordernumber>//td/a[text()='Order Number']/parent::*/following-sibling::*//input</Ordernumber>
 <OrderDescription>//*[@name='common_descr']</OrderDescription>
 <Update>//a[text()='Update']</Update>
 <OrderTab>//a[text()='Orders']</OrderTab>
@@ -11,15 +16,30 @@
 <EthernetProductCheckBox>//a[text()='Ethernet Connection Product']/parent::*/parent::*/parent::*/parent::*/td//input</EthernetProductCheckBox>
 <Addbutton>//button[text()='Add']</Addbutton>
 <UnderlyningOrder>//span[contains(text(),'Ethernet Connection')]/parent::a</UnderlyningOrder>
+<UnderlyningHubOrder>//span[contains(text(),'Hub Product Order')]/parent::a</UnderlyningHubOrder>
+<NCSID>//td/a[text()='NC Service ID']/parent::*/following-sibling::*[1]</NCSID>
+<ProductID>//td/a[text()='Product ID']/parent::*/following-sibling::*</ProductID>
 <Edit>//a[text()='Edit']</Edit>
+<NetworkReference>//td/a[text()='Network Reference']/parent::*/following-sibling::*//input</NetworkReference>
 <OrderSystemName>//td/a[text()='Order System']/parent::*/following-sibling::*//select</OrderSystemName>
 <Orderreferencenumber>//td/a[text()='Order System Service ID']/parent::*/following-sibling::*//input</Orderreferencenumber>
 <Topology>//td/a[text()='Topology']/parent::*/following-sibling::*//select</Topology>
-<Ordernumber>//td/a[text()='Order Number']/parent::*/following-sibling::*//input</Ordernumber>
 <CommercialProductName>//td/a[text()='Commercial Product Name']/parent::*/following-sibling::*//input</CommercialProductName>
 <CircuitCategory>//td/a[text()='Circuit Category']/parent::*/following-sibling::*//select</CircuitCategory>
 <ServiceBandwidth>//td/a[text()='Service Bandwidth']/parent::*/following-sibling::*//input[@type='text']</ServiceBandwidth>
 <RetainedNCSerId>//td/a[text()='Retained NC Service ID']/parent::*/following-sibling::*//input[@type='text']</RetainedNCSerId>
+<CarNorProductId>//td/a[text()='CARNOR Product ID']/parent::*/following-sibling::*//input[@type='text']</CarNorProductId>
+<ProductInstTab>//a[text()='Product Instances']</ProductInstTab>
+<ProductInstNumber>//span[contains(text(),'Ethernet Connection Product Instance')]</ProductInstNumber>
+<HubProductInstNumber>//span[contains(text(),'Hub Product Instance')]</HubProductInstNumber>
+<CreateDisconnectProductOrder>//a[text()='Create Disconnect Product Order']</CreateDisconnectProductOrder>
+<DisconnectOrder>//span[contains(text(),'Disconnect Ethernet Connection Product Order')]/parent::a</DisconnectOrder>
+<HardCeaseDelay>//*[text()='Hard Cease Delay In Days']/parent::*/following-sibling::*//input[@type='text']</HardCeaseDelay>
+<ColtPromiseMonth>//*[text()='CPD']/parent::*/following-sibling::*//input[@type='text'][1]</ColtPromiseMonth>
+<ColtPromiseDate>//*[text()='CPD']/parent::*/following-sibling::*//input[@type='text'][2]</ColtPromiseDate>
+<ColtPromiseYear>//*[text()='CPD']/parent::*/following-sibling::*//input[@type='text'][3]</ColtPromiseYear>
+<DisconnectSuborder>//a/span[contains(text(),'Disconnect Ethernet Connection Product Order #')]/parent::*/parent::*/parent::*/td//input</DisconnectSuborder>
+<Scheduler>//a[text()='Scheduler']</Scheduler>
 <GeneralInformation>
 <GeneralInformationTab>//a[text()='General Information']</GeneralInformationTab>
 <AddFeaturelink>//a[text()='Add Feature']</AddFeaturelink>
@@ -27,7 +47,13 @@
 <SelectFeature>//input[@value='Select']</SelectFeature>
 </GeneralInformation>
 <Suborder>//a/span[contains(text(),'New Ethernet Connection Product Order #')]/parent::*/parent::*/parent::*/td//input</Suborder>
+<HubSuborder>//a/span[contains(text(),'Hub Product Order #')]/parent::*/parent::*/parent::*/td//input</HubSuborder>
 <Decompose>//a[text()='Decompose']</Decompose>
+<NewEthernetConnProduct>(//a/span[contains(text(),"New Ethernet Connection Product")])/parent::*</NewEthernetConnProduct>
+<AddHub>//a[text()='Add Hub']</AddHub>
+<TypeofHub>//a[text()='Add Hub']/following-sibling::*//textarea</TypeofHub>
+<AddHubProdOrder>//img[@alt='New/Modify Hub Product Order']/following-sibling::div[1]</AddHubProdOrder>
+<NewHubSiteProductend>(//a/span[contains(text(),"New Hub Site Product")])/parent::*</NewHubSiteProductend>
 <NewEndSiteProductAend>//td[text()='Entering']/parent::*/td/a</NewEndSiteProductAend>
 <NewEndSiteProductBend>(//a/span[contains(text(),"New End Site Product")])[2]/parent::*</NewEndSiteProductBend>
 <SiteProductDetail>
@@ -47,10 +73,16 @@
 <CabinateType>//td/a[text()='Cabinet Type']/parent::*/following-sibling::*//select</CabinateType>
 <CabinateID>//td/a[text()='Cabinet ID']/parent::*/following-sibling::*//input</CabinateID>
 </CPE>
+<VLAN>
+<VLANLink>//span[text()='VLAN']/parent::*</VLANLink>
+<VlanTagId>//td/a[text()='VLAN Tag ID']/parent::*/following-sibling::*//input</VlanTagId>
+<Ethertype>//*[text()[contains(.,'Ethertype')]]/parent::*/following-sibling::*</Ethertype>
+</VLAN>
 </SiteProductDetail>
 <Accountbredcrumb>//a[@class=' path_pri txt_separator path_prev_item']</Accountbredcrumb>
 <AccountNameSorting>//a[text()='Name']</AccountNameSorting>
 <StartProccessing>//a[text()='Start Processing']</StartProccessing>
+<TransportCfs>//a[starts-with(@tooltip,'New Transport CFS Order')]</TransportCfs>
 <Tasks>
 <TaskTab>//a[text()='Tasks']</TaskTab>
 <ExecutionFlowlink>//a[text()='Execution Flow']/parent::*/following-sibling::*//a[2]</ExecutionFlowlink>
@@ -59,17 +91,26 @@
 <Scheduler>//a[text()='Scheduler']</Scheduler>
 <Errors>//a[text()='Errors']</Errors>
 <TaskReadytoComplete>//td[text()='Ready']/parent::*/td//a</TaskReadytoComplete>
-<AccessNetworkElement>//td/a[text()='Access Network Element']/parent::*/following-sibling::*//input[@type='text']</AccessNetworkElement>
 <AccessPort>//td/a[text()='Access Port']/parent::*/following-sibling::*//input[@type='text']</AccessPort>
+<AccessNetworkElement>//td/a[text()='Access Network Element']/parent::*/following-sibling::*//input[@type='text']</AccessNetworkElement>
 <PENetworkElement>//*[text()='PE Network Element']/parent::*/following-sibling::*//input[@type='text']</PENetworkElement>
 <PePort>//*[text()='PE Port']/parent::*/following-sibling::*//input[@type='text']</PePort>
 <VCXController>//*[text()='VCX Controller']/parent::*/following-sibling::*//input[@type='text']</VCXController>
+<Beacon>//*[text()='Beacon']/parent::*/following-sibling::*//input[@type='text']</Beacon> 
+<CPETrunkPort>//*[text()='CPE Trunk Port']/parent::*/following-sibling::*//input[@type='text']</CPETrunkPort>
 <OAMProfile>//*[text()='OAM Profile']/parent::*/following-sibling::*//input[@type='text']</OAMProfile>
+<SerialTaskName>//td/a[text()='Name']/parent::*/following-sibling::*</SerialTaskName>
 <UpdateAntSerialNumber>//a[text()='Update ANT Serial Number']</UpdateAntSerialNumber>
+<UpdateSerialNumber>//a[text()='Update Serial Number']</UpdateSerialNumber> 
+<EthernetLinkTransportRFS_1>(//span[text()='Ethernet Link Transport RFS']/parent::*)[1]</EthernetLinkTransportRFS_1>
+<EthernetLinkTransportRFS_2>(//span[text()='Ethernet Link Transport RFS']/parent::*)[2]</EthernetLinkTransportRFS_2>
+<LegacyCpeProfile>//*[text()='Legacy CPE Profile']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeProfile> 
+<LegacyCpeOamLevel>//*[text()='Legacy CPE OAM Level']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeOamLevel> 
+<LegacyCpeSupportsCFM>//*[text()='Legacy CPE supports CFM']/parent::*/following-sibling::*//select</LegacyCpeSupportsCFM> 
 <Complete>//a[@tooltip='Complete']</Complete>
 <TransComplete>//a[text()='Complete']</TransComplete>
 <WorkItemSelect>//a/span[contains(text(),'Reserve Access Resources')]/parent::*/parent::*/parent::*/td//input</WorkItemSelect>
 <View>//a[text()='View']</View>
-<OrderCompleted>//a/span[contains(text(),'"+arrOfStr1[1]+"')]/parent::*/parent::*/following-sibling::td[contains(text(),"Process Completed")]</OrderCompleted>
+<Errors>//a[text()='Errors']</Errors>
 </Tasks>
 </locators>
