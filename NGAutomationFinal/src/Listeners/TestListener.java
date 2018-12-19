@@ -43,7 +43,7 @@ public class TestListener extends DriverTestcase implements ITestListener {
         //Start operation for extentreports.
         //ExtentTestManager.
         //Log.info("I am in onStart method " + iTestResult.getTestContext().getAttribute("testname"));
-        ExtentTestManager.startTest(iTestResult.getTestContext().getSuite().getXmlSuite().getName().toString()+"-"+iTestResult.getTestContext().getCurrentXmlTest().getName().toString()+"-"+iTestResult.getTestContext().getAttribute("testName").toString(),"");
+        ExtentTestManager.startTest(iTestResult.getTestContext().getSuite().getXmlSuite().getName().toString()+"-"+iTestResult.getTestContext().getAttribute("testName").toString(),"");
     }
  
     public void onTestSuccess(ITestResult iTestResult) {
@@ -68,6 +68,7 @@ public class TestListener extends DriverTestcase implements ITestListener {
         //Extentreports log and screenshot operations for failed tests.
         ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Failed",
                 ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
+       
     }
  
     public void onTestError(ITestResult iTestResult) {
