@@ -7,5 +7,5 @@
 <SiebelAccounts>//*[text()='Accounts']/parent::*</SiebelAccounts>
 <SiebelOCN>//*[text()='Account Number(OCN)']/parent::*/following-sibling::*//input</SiebelOCN>
 <SiebelAccountGo>//*[text()='Go']/parent::*</SiebelAccountGo>
-<SiebelCustomerName>//*[contains(@title,'ZZZZ ES TEST')]</SiebelCustomerName>
+<SiebelCustomerName>//*[contains(@title,'ZZZZ ES TEST12')]</SiebelCustomerName>
 </locators>
