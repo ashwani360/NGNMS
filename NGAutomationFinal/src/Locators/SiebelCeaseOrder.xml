@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locators>
+<ServiceOrderTab>//a[text()='Service Order']</ServiceOrderTab>
+<InputOrderNo>//input[@aria-labelledby="QuerySrchSpec_Label"]</InputOrderNo>
+<SearchOrderNo>//input[@aria-labelledby="QuerySrchSpec_Label"]/following-sibling::*[1]</SearchOrderNo>
+<OrderStatus>//input[@aria-label="Order Status"]</OrderStatus>
+<ClickOrderNo>//a[@name="COLT Service Order Num"]</ClickOrderNo>
+<OrderStatusCheck>//td[text()='Completed']</OrderStatusCheck>
+<TechnicalOrder>//a[text()="Technical Orders"]</TechnicalOrder>
+<TechnicalOrderStatus>//input[@aria-label="Technical Order Status"]</TechnicalOrderStatus>
+<BillingStatusCheck>//td[text()='COMPLETE']</BillingStatusCheck>
+<BillingTab>//a[text()='Billing']</BillingTab>
+<OrderTab>//a[text()='Orders']</OrderTab>
+<CustomerOrderTab>//a[text()='Customer Orders']</CustomerOrderTab>
+<SiebelOrder>//input[@aria-labelledby="Order_Number_Label"]</SiebelOrder>
+<Go>//span[text()='Go']</Go>
+<CeaseButton>//span[text()='Cease']</CeaseButton>
+<ServiceOrderReferenceNo>//a[@name='Order Number']</ServiceOrderReferenceNo>
+<CeaseCircuitRef>//input[@name="Circuit Reference"]</CeaseCircuitRef>
+<OrderType>//input[@aria-label="Order Type"]</OrderType>
+<OrderTypeDropDown>//table[@class="GridBack"]/tbody/tr[4]/td[2]/div/span</OrderTypeDropDown>
+<OrderSubTypeSearch>//input[@aria-labelledby="COLT_Order_Item_Sub_Type_Label"]/following-sibling::*</OrderSubTypeSearch>
+<AddOrderSubType>//button[@title="Service Order Sub Type:New"]</AddOrderSubType>
+<OrderSubType>//input[@name="COLT_Order_Item_Sub_Type"]</OrderSubType>
+<CeaseReason>//input[@aria-labelledby="COLT_Cease_Order_Reason_Code_Label"]</CeaseReason>
+<SelectNew>//li[text()='New']</SelectNew>
+<SubmitSubOrderType>//button[@title="Service Order Sub Type:OK"]</SubmitSubOrderType>
+<OrderDate>
+<OrderDates>//a[text()='Order Dates']</OrderDates>
+<OrderSignedDate>//input[@aria-label="Order Signed Date"]</OrderSignedDate>
+<ColtActualDate>//input[@aria-labelledby="COLT_Actual_RFS_Date_Label"]</ColtActualDate>
+<OrderReceivedDate>//input[@aria-labelledby="COLT_Order_Received_Date_Label"]</OrderReceivedDate>
+<CustomerRequestDate>//input[@aria-labelledby="Customer_Requested_Date1_Label"]</CustomerRequestDate>
+</OrderDate>
+<BillingDetails>
+<Billing>//a[text()='Billing']</Billing>
+<ExpandAllButton>//button[@title="Service Charges:Expand All"]</ExpandAllButton>
+<BillingEndDate>//input[@aria-label="Billing End Date"]</BillingEndDate>
+</BillingDetails>
+<OrderStatus>//input[@aria-label="Order Status"]</OrderStatus>
+<OrderStatusDropdown>//table[@class="GridBack"]/tbody/tr[4]/td[3]/div/span</OrderStatusDropdown>
+<SelectTechnicalValidation>//li[text()='Technical Validation']</SelectTechnicalValidation>
+<PrimaryTestCompleted></PrimaryTestCompleted>
+<ExistingCapacity></ExistingCapacity>
+<SubmitTechnicalOrder>//button[text()='SubmitTechnicalOrder']</SubmitTechnicalOrder>
+<TechnicalOrderTab>//a[text()='Technical Orders']</TechnicalOrderTab>
+<TechnicalOrderStatus>//td[@id="1_s_5_l_COLT_Technical_Order_Status"]</TechnicalOrderStatus>
+<OrderComplete>//button[text()="Yes"]</OrderComplete>
+<Accounts>//a[@data-tabindex='tabScreen2']</Accounts>
+<AccountAdministration>//a[text()='Accounts Administration']</AccountAdministration>
+<AccountsDropdown>//div[@class="siebui-btn-grp-search"]//span[@class="siebui-icon-dropdown applet-form-combo applet-list-combo"]</AccountsDropdown>
+<SelectAccountNo>//li[text()='Account Number (#)']</SelectAccountNo>
+<InputAccountNo>//input[@aria-labelledby="QuerySrchSpec_Label"]</InputAccountNo>
+<AccountGoButton>//div[@class="AppletButtons siebui-applet-buttons"]//button[@title="Accounts:Go"]</AccountGoButton>
+<OCNfield>//input[@aria-label='Account Number(OCN)']</OCNfield>
+<GoButton>//span[text()='Go']</GoButton>
+<NewServiceOrder>//*[(@aria-label='Line Items:New Service Order')]</NewServiceOrder>
+<CircuitReference>//input[@name="Circuit Reference"]</CircuitReference>
+</locators>
