@@ -35,6 +35,7 @@
 <AccessType>//td/a[text()='Access Type']/parent::*/following-sibling::*//select</AccessType>
 <SiteEnd>//td/a[text()='Site End']/parent::*/following-sibling::*//select</SiteEnd>
 <SiteID>//td/a[text()='Site ID']/parent::*/following-sibling::*//input</SiteID>
+<ReturnTask>//span[text()='CPE Information']/parent::*</ReturnTask>
 <Accessport>
 <AccessPortLink>//span[text()='Access Port']/parent::*</AccessPortLink>
 <PresentConnectType>//td/a[text()='Presentation Connector Type']/parent::*/following-sibling::*//select</PresentConnectType>
@@ -48,6 +49,7 @@
 </CPE>
 </SiteProductDetail>
 <Accountbredcrumb>//a[@class=' path_pri txt_separator path_prev_item']</Accountbredcrumb>
+<TransportCfs>//a[starts-with(@tooltip,'New Transport CFS Order')]</TransportCfs>
 <AccountNameSorting>//a[text()='Name']</AccountNameSorting>
 <StartProccessing>//a[text()='Start Processing']</StartProccessing>
 <Tasks>
@@ -64,12 +66,13 @@
 <PePort>//*[text()='PE Port']/parent::*/following-sibling::*//input[@type='text']</PePort>
 <VCXController>//*[text()='VCX Controller']/parent::*/following-sibling::*//input[@type='text']</VCXController>
 <OAMProfile>//*[text()='OAM Profile']/parent::*/following-sibling::*//input[@type='text']</OAMProfile>
+<SerialTaskName>//td/a[text()='Name']/parent::*/following-sibling::*</SerialTaskName>
 <UpdateAntSerialNumber>//a[text()='Update ANT Serial Number']</UpdateAntSerialNumber>
+<UpdateSerialNumber>//a[text()='Update Serial Number']</UpdateSerialNumber> 
+<Beacon>//*[text()='Beacon']/parent::*/following-sibling::*//input[@type='text']</Beacon>
+<EthernetLinkTransportRFS_1>(//span[text()='Ethernet Link Transport RFS']/parent::*)[1]</EthernetLinkTransportRFS_1>
+<EthernetLinkTransportRFS_2>(//span[text()='Ethernet Link Transport RFS']/parent::*)[2]</EthernetLinkTransportRFS_2>
 <Complete>//a[@tooltip='Complete']</Complete>
-<LegacyCpeProfile>//*[text()='Legacy CPE Profile']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeProfile>
-<LegacyCpeOamLevel>//*[text()='Legacy CPE OAM Level']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeOamLevel>
-<LegacyCpeSupportsCFM>//*[text()='Legacy CPE supports CFM']/parent::*/following-sibling::*//select</LegacyCpeSupportsCFM>
-<Error>//a[text()='Errors']</Error>
 <TransComplete>//a[text()='Complete']</TransComplete>
 <WorkItemSelect>//a/span[contains(text(),'Reserve Access Resources')]/parent::*/parent::*/parent::*/td//input</WorkItemSelect>
 <View>//a[text()='View']</View>
