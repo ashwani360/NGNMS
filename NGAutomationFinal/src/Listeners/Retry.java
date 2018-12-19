@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 import Driver.DriverTestcase;
-import Reporter.ExtentTestManager;
  
 public class Retry implements IRetryAnalyzer {
  
