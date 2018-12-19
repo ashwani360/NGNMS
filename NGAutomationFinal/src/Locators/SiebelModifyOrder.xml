@@ -14,9 +14,8 @@
 <OpportunityNo>//*[(@aria-labelledby='Opportunity_Number_Label')]</OpportunityNo>
 <RequestReceivedDate>//*[(@aria-label='Request Received Date')]</RequestReceivedDate>
 <OrderSubTypeSearch>//input[@aria-labelledby="COLT_Order_Item_Sub_Type_Label"]/following-sibling::*</OrderSubTypeSearch>
-<OrderSubType>//input[@name="COLT_Order_Item_Sub_Type"]</OrderSubType>
 <AddOrderSubType>//button[@title="Service Order Sub Type:New"]</AddOrderSubType>
-<SubmitSubOrderType>//button[@title="Service Order Sub Type:OK"]</SubmitSubOrderType>
+<OrderSubType>//input[@name="COLT_Order_Item_Sub_Type"]</OrderSubType>
 <SelectNew>//li[text()='New']</SelectNew>
 <SubmitSubOrderType>//button[@title="Service Order Sub Type:OK"]</SubmitSubOrderType>
 <CustomizeButton>//div[@class='full_info_link']/button</CustomizeButton>
@@ -51,6 +50,10 @@
 <BCNInstallationChargeNRC>//table[@summary="Service Charges"]/tbody/tr[5]/td[6]</BCNInstallationChargeNRC>
 <BCNInstallationChargeNRCSearch>//table[@summary="Service Charges"]/tbody/tr[5]/td[6]/span</BCNInstallationChargeNRCSearch>
 <BCNInstallationChargeNRCInput>//input[@aria-labelledby="PopupQuerySrchspec_Label"]</BCNInstallationChargeNRCInput>
+<BCNNRCSubmit>//button[@title="Billing Profile:OK"]</BCNNRCSubmit>
+<BCNRecurringChargeMRC>//table[@summary="Service Charges"]/tbody/tr[5]/td[6]</BCNRecurringChargeMRC>
+<BCNRecurringChargeMRCSearch>//table[@summary="Service Charges"]/tbody/tr[5]/td[6]/span</BCNRecurringChargeMRCSearch>
+<BCNRecurringChargeMRCInput>//input[@aria-labelledby="PopupQuerySrchspec_Label"]</BCNRecurringChargeMRCInput>
 <ContractTerm>//input[@aria-label="Contract Term"]</ContractTerm>
 <SelectContractTerm>//li[text()='12']</SelectContractTerm>
 <ContractRenewalFlag>//input[@aria-label="Contract Renewal Flag"]</ContractRenewalFlag>
@@ -67,6 +70,8 @@
 <TriggerTRButton>//button[text()='Trigger TR']</TriggerTRButton>
 <ExistingCapacityLeadTimePrimary>//input[@aria-labelledby="COLT_Existing_Capacity_Lead_Time_Code_Label"]</ExistingCapacityLeadTimePrimary>
 <OSSPlatformFlag>//select[@name="COLT OSS Platform Flag"]</OSSPlatformFlag>
+<PrimaryTestCompleted></PrimaryTestCompleted>
+<ExistingCapacity></ExistingCapacity>
 <SubmitTechnicalOrder>//button[text()='SubmitTechnicalOrder']</SubmitTechnicalOrder>
 <TechnicalOrderTab>//a[text()='Technical Orders']</TechnicalOrderTab>
 <TechnicalOrderStatus>//td[@id="1_s_5_l_COLT_Technical_Order_Status"]</TechnicalOrderStatus>
@@ -76,4 +81,18 @@
 <OrderComplete>//button[text()="Yes"]</OrderComplete>
 <WarningOk>//span[text()='Ok']</WarningOk>
 <ServiceBandwidth>//select[@name='Service Bandwidth']</ServiceBandwidth>
+
+
+
+
+<Accounts>//a[@data-tabindex='tabScreen2']</Accounts>
+<AccountAdministration>//a[text()='Accounts Administration']</AccountAdministration>
+<AccountsDropdown>//div[@class="siebui-btn-grp-search"]//span[@class="siebui-icon-dropdown applet-form-combo applet-list-combo"]</AccountsDropdown>
+<SelectAccountNo>//li[text()='Account Number (#)']</SelectAccountNo>
+<InputAccountNo>//input[@aria-labelledby="QuerySrchSpec_Label"]</InputAccountNo>
+<AccountGoButton>//div[@class="AppletButtons siebui-applet-buttons"]//button[@title="Accounts:Go"]</AccountGoButton>
+<OCNfield>//input[@aria-label='Account Number(OCN)']</OCNfield>
+<GoButton>//span[text()='Go']</GoButton>
+<NewServiceOrder>//*[(@aria-label='Line Items:New Service Order')]</NewServiceOrder>
+
 </locators>
