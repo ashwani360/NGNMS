@@ -1,5 +1,13 @@
 package Testscript;
+import java.lang.reflect.Method;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.LogStatus;
 
 import Driver.DataReader;
 import Driver.DriverTestcase;
@@ -7,6 +15,19 @@ import Reporter.ExtentTestManager;
 
 
 public class CreateHubOrder extends DriverTestcase {	
+
+@AfterMethod
+public void returntoAccountPages(Method method,ITestResult result) throws Exception
+	{
+		if(method.getName().equals("HubCreateAndProcess")){
+		NewHubOrderhelper.GotoErrors();
+		String base64Screenshot="data:image/png;base64,"+((TakesScreenshot)dr).getScreenshotAs(OutputType.BASE64);
+		ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Failed",ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot)); 
+		NavigationHelper.GotoDocument();
+		NavigationHelper.GotoAccount();
+		itr=itr+1;
+		}
+	}
 	
 @Test(dataProviderClass=DataReader.class,dataProvider="HubAndSpokeNewOrder")
 	public void HubCreateAndProcess(Object[] Data) throws Exception
@@ -28,12 +49,13 @@ public class CreateHubOrder extends DriverTestcase {
 //		13. Now click on Edit button and set Port Role as Physical Port and click on Update button.
 	NewHubOrderhelper.HubProductDeviceDetails(Data);
 //		14. Navigate to Customer account, search for the composite order, select it and click Start Processing button on the top.
+	NewHubOrderhelper.ProcessHubOrder(Data);
 //		15. Now click on the order and move to Tasks tab.
 //		16. Now click on the Execution flow link and move to Work Items tab.
 //		17. Make sure that 1 work items Reserve access is created.
 //		18. Click on Reserve access link and in Access network element search AR10.BLB & set Access Port as GigabitEthernet/0/0/0/37 and click on Complete button.
 //		19. Wait for all the tasks to get completed and make that Composite order is in Process completed status.
-	NewHubOrderhelper.ProcessHubOrder(Data);
+	NewHubOrderhelper.CompleteHubOrder(Data);
 //	Spoke Order Creation	
 //		1. Click on New Composite order and in the screen displayed Enter a description and click on Update.
 	NewHubOrderhelper.CreatCompositSpokeOrder(Data);
@@ -62,14 +84,14 @@ public class CreateHubOrder extends DriverTestcase {
 //		19. Navigate to General Information tab click on Access Port link, click the Edit button, set Port Role as Physical Port and click Update.
 	NewHubOrderhelper.SpokeProductDeviceDetails(Data);
 //		20. Navigate to Customer account, search for the composite order, select it and click Start Processing button on the top.
+	NewHubOrderhelper.ProcessSpokeOrder(Data);
 //		21. Now click on the order and move to Tasks tab.
 //		22. Now click on the Execution flow link and move to Work Items tab.
 //		23. In the screen click the link and set Access network element search for AR10.BLB and set Access Port as GigabitEthernet/0/0/0/43 and click on Complete button.
 //		24. Wait for the Start Activation confirmation work item to get created.
 //		25. Once created click on the start activation link and click on Complete button.
 //		26. Now wait for all the Automated tasks to get completed and make sure that the Spoke composite order also has Status as  Process Completed.
-	NewHubOrderhelper.ProcessSpokeOrder(Data);
-		
+	NewHubOrderhelper.CompleteSpokeOrder(Data);
 	}
 
 }
