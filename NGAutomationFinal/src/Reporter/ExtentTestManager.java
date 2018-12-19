@@ -11,6 +11,7 @@ public class ExtentTestManager {
     static ExtentReports extent = ExtentManager.getReporter();
  
     public static synchronized ExtentTest getTest() {
+    	
         return (ExtentTest)extentTestMap.get((int) (long) (Thread.currentThread().getId()));
     }
  
@@ -19,6 +20,7 @@ public class ExtentTestManager {
     }
  
     public static synchronized ExtentTest startTest(String testName, String desc) {
+    	
     	ExtentTest test = extent.startTest(testName, desc);
         extentTestMap.put((int) (long) (Thread.currentThread().getId()), test);
         return test;
