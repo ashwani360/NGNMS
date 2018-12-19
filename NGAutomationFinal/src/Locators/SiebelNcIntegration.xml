@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locators>
+<AccountNameSorting>//a[text()='Name']</AccountNameSorting>
+<Accountbredcrumb>//a[@class=' path_pri txt_separator path_prev_item']</Accountbredcrumb>
+<ProdIdFiltering>//a[contains(text(),'Product ID')]/parent::*/following-sibling::*</ProdIdFiltering>
+<FilterSelectProdId>//td/select[@class='inputs']</FilterSelectProdId>
+<FilterInputValue>//div/input[@class='inputs']</FilterInputValue>
+<SelectLink>//div/input[@class='inputs']/following-sibling::*/child::*</SelectLink>
+<OrderLink>//a/span[contains(text(),'Order #')]/parent::*</OrderLink>
+<LinkforOrder>//a[contains(text(),'Order #')]</LinkforOrder>
+<ApplyButton>//*[@class='FilterButtons'] //*[text()='Apply']</ApplyButton>
+</locators>

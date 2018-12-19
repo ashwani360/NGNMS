@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locators>
+<ServiceOrderTab>//a[text()='Service Order']</ServiceOrderTab>
+<InputOrderNo>//input[@aria-labelledby="QuerySrchSpec_Label"]</InputOrderNo>
+<SearchOrderNo>//input[@aria-labelledby="QuerySrchSpec_Label"]/following-sibling::*[1]</SearchOrderNo>
+<OrderStatus>//input[@aria-label="Order Status"]</OrderStatus>
+<ClickOrderNo>//a[@name="COLT Service Order Num"]</ClickOrderNo>
+<OrderStatusCheck>//td[text()='Completed']</OrderStatusCheck>
+<BillingStatusCheck>//td[text()='COMPLETE']</BillingStatusCheck>
+<CircuitReference>//input[@name='Circuit Reference']</CircuitReference>
+<Modifybutton>//span[text()='Modify']</Modifybutton>
+<ServiceOrderReferenceNo>//a[@name='Order Number']</ServiceOrderReferenceNo>
+<ModifyCircuitRef>//input[@name="Circuit Reference"]</ModifyCircuitRef>
+<OpportunityNo>//*[(@aria-labelledby='Opportunity_Number_Label')]</OpportunityNo>
+<RequestReceivedDate>//*[(@aria-label='Request Received Date')]</RequestReceivedDate>
+<OrderSubTypeSearch>//input[@aria-labelledby="COLT_Order_Item_Sub_Type_Label"]/following-sibling::*</OrderSubTypeSearch>
+<OrderSubType>//input[@name="COLT_Order_Item_Sub_Type"]</OrderSubType>
+<AddOrderSubType>//button[@title="Service Order Sub Type:New"]</AddOrderSubType>
+<SubmitSubOrderType>//button[@title="Service Order Sub Type:OK"]</SubmitSubOrderType>
+<SelectNew>//li[text()='New']</SelectNew>
+<SubmitSubOrderType>//button[@title="Service Order Sub Type:OK"]</SubmitSubOrderType>
+<CustomizeButton>//div[@class='full_info_link']/button</CustomizeButton>
+<CustomizeServiceBandwidth>//a[contains(@name,'Service Bandwidth')]//following-sibling::*//select</CustomizeServiceBandwidth>
+<EthernetlineLink>//a[text()='Ethernet Line']</EthernetlineLink>
+<EthernetConnectionLink>//a[text()="Ethernet Connection"][@href="javascript:void(0);"]</EthernetConnectionLink>
+<AendSiteLink>//a[text()="A End Site"]</AendSiteLink>
+<BendSiteLink>//a[text()="B End Site"]</BendSiteLink>
+<SpokeSiteLink>//a[text()="Spoke Site"][@href="javascript:void(0);"]</SpokeSiteLink>
+<CPEInformationLink>//a[text()='CPE Information'][@href="javascript:void(0);"]</CPEInformationLink>
+<AccessPortLink>//a[text()='Access Port'][@href="javascript:void(0);"]</AccessPortLink>
+<PortRole>//a[contains(@name,'Port Role')]/following-sibling::*//select</PortRole>
+<PortId>//a[contains(@name,'Physical Port ID')]/following-sibling::*//input</PortId>
+<VLANTaggingMode>//a[contains(@name,'VLAN Tagging Mode')]/following-sibling::*//select</VLANTaggingMode>
+<VLANLink>//a[text()='VLAN'][@href="javascript:void(0);"]</VLANLink>
+<VLANTagID>//a[contains(@name,'VLAN Tag ID')]/following-sibling::*//input</VLANTagID>
+<InstallationTimeLink>//a[text()="Installation Time"][@href="javascript:void(0);"]</InstallationTimeLink>
+<InstallTime>//a[contains(@name,'Install Time')]//following-sibling::*//select</InstallTime>
+<DoneEthernetConnection>//button[text()='Done']</DoneEthernetConnection>
+<OrderDate>
+<OrderDates>//a[text()='Order Dates']</OrderDates>
+<OrderSignedDate>//input[@aria-label="Order Signed Date"]</OrderSignedDate>
+<ColtActualDate>//input[@aria-labelledby="COLT_Actual_RFS_Date_Label"]</ColtActualDate>
+<OrderReceivedDate>//input[@aria-labelledby="COLT_Order_Received_Date_Label"]</OrderReceivedDate>
+</OrderDate>
+<BillingDetails>
+<Billing>//a[text()='Billing']</Billing>
+<ExpandAllButton>//button[@title="Service Charges:Expand All"]</ExpandAllButton>
+<InstallationChargeNRC>//table[@summary="Service Charges"]/tbody/tr[5]/td[5]</InstallationChargeNRC>
+<InputinstallationChargeNRC>//table[@summary="Service Charges"]/tbody/tr[5]/td[5]/input</InputinstallationChargeNRC>
+<BCNNRCSubmit>//button[@title="Billing Profile:OK"]</BCNNRCSubmit>
+<BCNInstallationChargeNRC>//table[@summary="Service Charges"]/tbody/tr[5]/td[6]</BCNInstallationChargeNRC>
+<BCNInstallationChargeNRCSearch>//table[@summary="Service Charges"]/tbody/tr[5]/td[6]/span</BCNInstallationChargeNRCSearch>
+<BCNInstallationChargeNRCInput>//input[@aria-labelledby="PopupQuerySrchspec_Label"]</BCNInstallationChargeNRCInput>
+<ContractTerm>//input[@aria-label="Contract Term"]</ContractTerm>
+<SelectContractTerm>//li[text()='12']</SelectContractTerm>
+<ContractRenewalFlag>//input[@aria-label="Contract Renewal Flag"]</ContractRenewalFlag>
+<SelectContractRenewalFlag>//ul[@role='combobox']/li[text()='No']</SelectContractRenewalFlag>
+</BillingDetails>
+<OrderStatus>//input[@aria-label="Order Status"]</OrderStatus>
+<OrderStatusDropdown>//table[@class="GridBack"]/tbody/tr[4]/td[3]/div/span</OrderStatusDropdown>
+<SelectCommercialValidation>//li[text()='Commercial Validation']</SelectCommercialValidation>
+<SelectTechnicalValidation>//li[text()='Technical Validation']</SelectTechnicalValidation>
+<SelectDelivery>//li[text()='Delivery']</SelectDelivery>
+<SelectCommercialValidation>//ul[@role='combobox']/li[text()='Commercial Validation']</SelectCommercialValidation>
+<SelectCompleted>//li[text()='Completed']</SelectCompleted>
+<BDWREVWCheckbox></BDWREVWCheckbox>
+<TriggerTRButton>//button[text()='Trigger TR']</TriggerTRButton>
+<ExistingCapacityLeadTimePrimary>//input[@aria-labelledby="COLT_Existing_Capacity_Lead_Time_Code_Label"]</ExistingCapacityLeadTimePrimary>
+<OSSPlatformFlag>//select[@name="COLT OSS Platform Flag"]</OSSPlatformFlag>
+<SubmitTechnicalOrder>//button[text()='SubmitTechnicalOrder']</SubmitTechnicalOrder>
+<TechnicalOrderTab>//a[text()='Technical Orders']</TechnicalOrderTab>
+<TechnicalOrderStatus>//td[@id="1_s_5_l_COLT_Technical_Order_Status"]</TechnicalOrderStatus>
+<DropDown>//*[@aria-label='Third Level View Bar']</DropDown>
+<InstallationAndTestTab>//a[text()='Installation and Test']</InstallationAndTestTab>
+<PrimaryTestingMethod>//input[@aria-label="Primary Testing Method"]</PrimaryTestingMethod>
+<OrderComplete>//button[text()="Yes"]</OrderComplete>
+<WarningOk>//span[text()='Ok']</WarningOk>
+<ServiceBandwidth>//select[@name='Service Bandwidth']</ServiceBandwidth>
+</locators>
