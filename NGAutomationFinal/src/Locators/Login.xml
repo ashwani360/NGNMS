@@ -12,5 +12,7 @@
 <SiebelPassword>id=s_swepi_2</SiebelPassword>
 <SiebelLoginbutton>//*[@id="s_swepi_22"]</SiebelLoginbutton>
 //<SiebelUserinfo>//*[@id="gen_menu_6"]</SiebelUserinfo>
+<AccountSettingButton>//li[@title="Settings"]</AccountSettingButton>
+<Logout>//button[text()="Logout"]</Logout>
 </Siebel>
 </locators>
