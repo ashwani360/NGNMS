@@ -3,7 +3,7 @@
 <Topnavegation>//*[@id='gen_menu_3']</Topnavegation>
 <Submenu>//span[text()='Documents']/parent::*</Submenu>
 <Customertype>//span[text()='COLT OM Customers']/parent::*</Customertype>
-<Customername>//span[text()='ZZZZ UK TEST']/parent::*</Customername>
+<Customername>//span[text()='ZZZZ ES TEST12']/parent::*</Customername>
 <SiebelAccounts>//*[text()='Accounts']/parent::*</SiebelAccounts>
 <SiebelOCN>//*[text()='Account Number(OCN)']/parent::*/following-sibling::*//input</SiebelOCN>
 <SiebelAccountGo>//*[text()='Go']/parent::*</SiebelAccountGo>
