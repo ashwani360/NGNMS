@@ -80,6 +80,7 @@
 <CPETrunkPort>//*[text()='CPE Trunk Port']/parent::*/following-sibling::*//input[@type='text']</CPETrunkPort>
 <VCXController>//*[text()='VCX Controller']/parent::*/following-sibling::*//input[@type='text']</VCXController>
 <OAMProfile>//*[text()='OAM Profile']/parent::*/following-sibling::*//input[@type='text']</OAMProfile>
+<ANTCheck>//td/span[contains(text(),'New ANT')]</ANTCheck>
 <SerialTaskName>//td/a[text()='Name']/parent::*/following-sibling::*</SerialTaskName>
 <UpdateAntSerialNumber>//a[text()='Update ANT Serial Number']</UpdateAntSerialNumber>
 <UpdateSerialNumber>//a[text()='Update Serial Number']</UpdateSerialNumber>
