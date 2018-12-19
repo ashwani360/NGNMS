@@ -5,7 +5,6 @@
 <NewCompositeOrder>//a[text()='New Composite Order']</NewCompositeOrder>
 <OrderDescription>//*[@name='common_descr']</OrderDescription>
 <Update>//a[text()='Update']</Update>
-<UpdateSerialNumber>//a[text()='Update Serial Number']</UpdateSerialNumber>
 <OrderTab>//a[text()='Orders']</OrderTab>
 <AddonOrderTab>//a[text()='Add']</AddonOrderTab>
 <Productifram>//iframe[@id='linkage']</Productifram>
@@ -65,23 +64,36 @@
 <Ethertype>//*[text()[contains(.,'Ethertype')]]/parent::*/following-sibling::*</Ethertype>
 </VLAN>
 </SiteProductDetail>
+<TransportCfs>//a[starts-with(@tooltip,'New Transport CFS Order')]</TransportCfs>
 <Tasks>
 <TaskTab>//a[text()='Tasks']</TaskTab>
 <ExecutionFlowlink>//a[text()='Execution Flow']/parent::*/following-sibling::*//a[2]</ExecutionFlowlink>
 <Workitems>//a[text()='Work Items']</Workitems>
+<Scheduler>//a[text()='Scheduler']</Scheduler>
 <TaskTitle>//div[@id='user-task-context']//span[contains(text(),'[New]')]</TaskTitle>
 <ActivationTaskCofirm>//span[text()='Activation Start Confirmation [New]']/parent::*</ActivationTaskCofirm>
 <TaskReadytoComplete>//td[text()='Ready']/parent::*/td//a</TaskReadytoComplete>
 <AccessNetworkElement>//td/a[text()='Access Network Element']/parent::*/following-sibling::*//input[@type='text']</AccessNetworkElement>
 <AccessPort>//td/a[text()='Access Port']/parent::*/following-sibling::*//input[@type='text']</AccessPort>
+<PENetworkElement>//*[text()='PE Network Element']/parent::*/following-sibling::*//input[@type='text']</PENetworkElement>
+<PePort>//*[text()='PE Port']/parent::*/following-sibling::*//input[@type='text']</PePort>
+<CPETrunkPort>//*[text()='CPE Trunk Port']/parent::*/following-sibling::*//input[@type='text']</CPETrunkPort>
+<VCXController>//*[text()='VCX Controller']/parent::*/following-sibling::*//input[@type='text']</VCXController>
+<OAMProfile>//*[text()='OAM Profile']/parent::*/following-sibling::*//input[@type='text']</OAMProfile>
+<SerialTaskName>//td/a[text()='Name']/parent::*/following-sibling::*</SerialTaskName>
+<UpdateAntSerialNumber>//a[text()='Update ANT Serial Number']</UpdateAntSerialNumber>
+<UpdateSerialNumber>//a[text()='Update Serial Number']</UpdateSerialNumber>
+<Beacon>//*[text()='Beacon']/parent::*/following-sibling::*//input[@type='text']</Beacon>
+<EthernetLinkTransportRFS_1>(//span[text()='Ethernet Link Transport RFS']/parent::*)[1]</EthernetLinkTransportRFS_1>
+<EthernetLinkTransportRFS_2>(//span[text()='Ethernet Link Transport RFS']/parent::*)[2]</EthernetLinkTransportRFS_2> 
+<LegacyCpeProfile>//*[text()='Legacy CPE Profile']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeProfile> 
+<LegacyCpeOamLevel>//*[text()='Legacy CPE OAM Level']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeOamLevel> 
+<LegacyCpeSupportsCFM>//*[text()='Legacy CPE supports CFM']/parent::*/following-sibling::*//select</LegacyCpeSupportsCFM> 
 <Complete>//a[@tooltip='Complete']</Complete>
+<TransComplete>//a[text()='Complete']</TransComplete>
 <WorkItemSelect>//a/span[contains(text(),'Reserve Access Resources')]/parent::*/parent::*/parent::*/td//input</WorkItemSelect>
 <View>//a[text()='View']</View>
 <NCSID>//td/a[text()='NC Service ID']/parent::*/following-sibling::*[1]</NCSID>
 <Errors>//a[text()='Errors']</Errors>
-<LegacyCpeProfile>//*[text()='Legacy CPE Profile']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeProfile>
-<LegacyCpeOamLevel>//*[text()='Legacy CPE OAM Level']/parent::*/following-sibling::*//input[@type='text']</LegacyCpeOamLevel>
-<LegacyCpeSupportsCFM>//*[text()='Legacy CPE supports CFM']/parent::*/following-sibling::*//select</LegacyCpeSupportsCFM>
 </Tasks>
-<TransComplete>//a[text()='Complete']</TransComplete>
 </locators>
