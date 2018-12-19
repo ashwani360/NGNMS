@@ -447,8 +447,8 @@ public class DataReader {
 		 
 	}
 	
-	@DataProvider(name="SiebelOrder")
-	public static Object[][] SiebleInput() throws IOException
+	@DataProvider(name="SiebelNewOrder")
+	public static Object[][] siebelreader() throws IOException
 	{
 		
 		 FileInputStream file = new FileInputStream(new File("src\\Data\\SiebelNewOrder.xlsx"));
@@ -456,16 +456,29 @@ public class DataReader {
 		 XSSFSheet sheet = workbook.getSheetAt(0);
 		 XSSFRow r1=sheet.getRow(0);
 		 XSSFRow r;
-		 Object[][] listOfLists = new Object[sheet.getLastRowNum()][1];
+		 int rowindex=0;
+		 int totalrowrequired=0;
+		 for(int k=1;k<=sheet.getLastRowNum();k++){
+		 XSSFRow counter=sheet.getRow(k);
+		 if(counter.getCell(1).toString().equals("Yes"))
+		 {
+			 totalrowrequired=totalrowrequired+1;
+			
+		 }
+		 
+		 }
+		 Log.info("Total Data Set for Siebel P2P will be"+totalrowrequired);
+		 Object[][] listOfLists = new Object[totalrowrequired][1];
 		//Object[][] data= new Object[sheet.getLastRowNum()][r.getLastCellNum()];  
-		 //System.out.println("Total number of Columns" +r.getLastCellNum());
-		 //System.out.println("Total number of Columns" +sheet.getLastRowNum());
+		 //Log.info("Total number of Columns" +r.getLastCellNum());
+		 //Log.info("Total number of Columns" +sheet.getLastRowNum());
 		 for(int i=1;i<=sheet.getLastRowNum();i++)
 		 { 
 			 r=sheet.getRow(i);
 			 Object[]  data=new Object[r1.getLastCellNum()];
-			 //System.out.println(r.getLastCellNum());
-		   for(int j=0;j<=r1.getLastCellNum()-1;j++)
+			 //Log.info(r.getLastCellNum());
+		if(r.getCell(1).toString().equals("Yes")){
+		   for(int j=3;j<=r1.getLastCellNum()-1;j++)
 			 {
 			   String strCellValue;
 			   try {
@@ -473,31 +486,37 @@ public class DataReader {
 				   {
 					   int value=(int)r.getCell(j).getNumericCellValue();
 					   strCellValue=String.valueOf(value);
-					   System.out.println("The Value is in Int Format and Value is:"+strCellValue);
+					   Log.info("The Value is in Int Format and Value is:"+strCellValue);
 					   
 				   }
 				   
 				   else {
 					   strCellValue=r.getCell(j).toString();
-					   System.out.println("The Value of this cell is in String Format and Value is : "+strCellValue);
+					   Log.info("The Value of this cell is in String Format and Value is : "+strCellValue);
 				   }
 				   }
 				   catch(java.lang.NullPointerException e)
 				   {
 					   strCellValue="";
-					   System.out.println("The Value of this cell is: "+strCellValue);
+					   Log.info("The Value of this cell is: "+strCellValue);
 				   }
-			   data[j] = strCellValue;
+			   data[j-3] = strCellValue;
+			  
 			    //data[i-1][j] = ;
 			 
 			 }
-		   listOfLists[i-1][0]=data;
+		   data[r1.getLastCellNum()-2]=r.getCell(0).toString();
+		   data[r1.getLastCellNum()-1]=r.getCell(1).toString();
+		   Log.info("The Value of this cell is: "+data[r1.getLastCellNum()-2]);
+		   Log.info("The Value of this cell is: "+data[r1.getLastCellNum()-1]);
+		   listOfLists[rowindex][0]=data;
+		   rowindex=rowindex+1;
 		 }
-		 //System.out.println(data.toString());
+		 //Log.info(data.toString());
 		 workbook.close();
+		 }
 		 return listOfLists;
-		 
-	}
+	}	
 	
 	@DataProvider(name="SiebelModifyOrder")
 	public static Object[][] siebelmodifyreader() throws IOException
@@ -590,7 +609,7 @@ public class DataReader {
 		 }
 		 
 		 }
-		 Log.info("Total Data Set for Siebel Modify will be"+totalrowrequired);
+		 Log.info("Total Data Set for Siebel Cease will be"+totalrowrequired);
 		 Object[][] listOfLists = new Object[totalrowrequired][1];
 		//Object[][] data= new Object[sheet.getLastRowNum()][r.getLastCellNum()];  
 		 //Log.info("Total number of Columns" +r.getLastCellNum());
@@ -640,8 +659,60 @@ public class DataReader {
 		 }
 		 return listOfLists;
 	}	
-
-	//@DataProvider(name="Logindata",parallel=true)
+	
+	@DataProvider(name="Siebeldata")
+	public static Object[][] SiebleInput() throws IOException
+	{
+		
+		 FileInputStream file = new FileInputStream(new File("src\\Data\\SiebelNewOrder.xlsx"));
+		 XSSFWorkbook workbook = new XSSFWorkbook(file);
+		 XSSFSheet sheet = workbook.getSheetAt(0);
+		 XSSFRow r1=sheet.getRow(0);
+		 XSSFRow r;
+		 Object[][] listOfLists = new Object[sheet.getLastRowNum()][1];
+		//Object[][] data= new Object[sheet.getLastRowNum()][r.getLastCellNum()];  
+		 //System.out.println("Total number of Columns" +r.getLastCellNum());
+		 //System.out.println("Total number of Columns" +sheet.getLastRowNum());
+		 for(int i=1;i<=sheet.getLastRowNum();i++)
+		 { 
+			 r=sheet.getRow(i);
+			 Object[]  data=new Object[r1.getLastCellNum()];
+			 //System.out.println(r.getLastCellNum());
+		   for(int j=0;j<=r1.getLastCellNum()-1;j++)
+			 {
+			   String strCellValue;
+			   try {
+				   if(r.getCell(j).getCellType()==Cell.CELL_TYPE_NUMERIC)
+				   {
+					   int value=(int)r.getCell(j).getNumericCellValue();
+					   strCellValue=String.valueOf(value);
+					   System.out.println("The Value is in Int Format and Value is:"+strCellValue);
+					   
+				   }
+				   
+				   else {
+					   strCellValue=r.getCell(j).toString();
+					   System.out.println("The Value of this cell is in String Format and Value is : "+strCellValue);
+				   }
+				   }
+				   catch(java.lang.NullPointerException e)
+				   {
+					   strCellValue="";
+					   System.out.println("The Value of this cell is: "+strCellValue);
+				   }
+			   data[j] = strCellValue;
+			    //data[i-1][j] = ;
+			 
+			 }
+		   listOfLists[i-1][0]=data;
+		 }
+		 //System.out.println(data.toString());
+		 workbook.close();
+		 return listOfLists;
+		 
+	}
+	
+	//@DataProvider(name="Logindata")
 //	public static Object[][] LogindataReader() throws IOException
 //	{
 //		
@@ -677,8 +748,11 @@ public class DataReader {
 	Log.info(Integer.toString(inmodreader().length));
 	Log.info(Integer.toString(carnorreader().length));
 	Log.info(Integer.toString(ceasereader().length));
-	Log.info(Integer.toString(SiebleInput().length));
+	Log.info(Integer.toString(siebelreader().length));
 	Log.info(Integer.toString(siebelmodifyreader().length));
+	Log.info(Integer.toString(siebelceasereader().length));
+	Log.info("in main method");
+	Log.info(Integer.toString(SiebleInput().length));
 	
 }
 }
