@@ -2,29 +2,48 @@
 <locators>
 <OrderNumber>//td[@id='vv_-1']/span</OrderNumber>
 <ProductInstTab>//a[text()='Product Instances']</ProductInstTab>
+<ProductOrdrTab>//a[text()='Product Orders']</ProductOrdrTab>
 <ProductInstNumber>//span[contains(text(),'Ethernet Connection Product Instance')]</ProductInstNumber>
+<EthernetConnProdOrderNumber>//span[contains(text(),'Ethernet Connection Product Order #')]</EthernetConnProdOrderNumber>
 <Accountbredcrumb>//a[@class=' path_pri txt_separator path_prev_item']</Accountbredcrumb>
 <NameFiltering>//a[contains(text(),'Name')]/parent::*/following-sibling::*</NameFiltering>
-<InstNameFiltering>//a[contains(text(),'Name')]/parent::*/following-sibling::*</InstNameFiltering>
 <FilterSelectName>//*[@class='inputs']</FilterSelectName>
 <FilterInputValue>//*[@name='inp']</FilterInputValue>
-<ApplyButton>//a[text()='Apply']</ApplyButton>
+<ApplyButton>//*[@class='FilterButtons'] //*[text()='Apply']</ApplyButton>
 <ModifyCompositOrder>//a[text()='Create Modify Product Order']</ModifyCompositOrder>
+<InflightSoftProdOrder>//a[text()='Soft InFlight Product Order']</InflightSoftProdOrder>
 <LinkforOrder>//a[contains(text(),'Order #')]</LinkforOrder>
 <ModifiedNumber>//a[contains(text(),'Order #')]</ModifiedNumber>
 <UndelyingModifiedOrder>//span[contains(text(),'Modify Ethernet Connection')]/parent::a</UndelyingModifiedOrder>
+<UndelyingInfligtOrder>//span[contains(text(),'In-flight New Ethernet Connection')]/parent::a</UndelyingInfligtOrder>
 <Edit>//a[text()='Edit']</Edit>
 <ServiceBandwidth>//td/a[text()='Service Bandwidth']/parent::*/following-sibling::*//input[@type='text']</ServiceBandwidth>
 <Update>//a[text()='Update']</Update>
 <OrderTab>//a[text()='Orders']</OrderTab>
 <ModifySuborder>//a/span[contains(text(),'Modify Ethernet Connection Product Order #')]/parent::*/parent::*/parent::*/td//input</ModifySuborder>
+<InflightSuborder>//a/span[contains(text(),'In-flight New Ethernet Connection Product Order #')]/parent::*/parent::*/parent::*/td//input</InflightSuborder>
 <Decompose>//a[text()='Decompose']</Decompose>
 <AccountNameSorting>//a[text()='Name']</AccountNameSorting>
+<ModifyEndSiteProductAend>(//a/span[contains(text(),"Modify End Site Product")])[1]/parent::*</ModifyEndSiteProductAend>
+<ModifyEndSiteProductBend>(//a/span[contains(text(),"Modify End Site Product")])[2]/parent::*</ModifyEndSiteProductBend>
+<EndCheck>//td/a[text()='Site End']/parent::*/following-sibling::*[1]</EndCheck>
+<GeneralInformationTab>//a[text()='General Information']</GeneralInformationTab>
+<AddFeaturelink>//a[text()='Add Feature']</AddFeaturelink>
+<TypeofFeature>//a[text()='Add Feature']/following-sibling::*//textarea</TypeofFeature>
+<SelectFeature>//input[@value='Select']</SelectFeature>
+<AccessPortLink>//span[text()='Access Port']/parent::*</AccessPortLink>
+<AccessportRole>//td/a[text()='Port Role']/parent::*/following-sibling::*//select</AccessportRole>
+<VLANLink>//span[text()='VLAN']/parent::*</VLANLink>
+<VlanTagId>//td/a[text()='VLAN Tag ID']/parent::*/following-sibling::*//input</VlanTagId>
+<Ethertype>//*[text()[contains(.,'Ethertype')]]/parent::*/following-sibling::*</Ethertype>
+<VlanTaggingMode>//td/a[text()='VLAN Tagging Mode']/parent::*/following-sibling::*//select</VlanTaggingMode>
 <StartProccessing>//a[text()='Start Processing']</StartProccessing>
 <Tasks>
 <TaskTab>//a[text()='Tasks']</TaskTab>
 <ExecutionFlowlink>//a[text()='Execution Flow']/parent::*/following-sibling::*//a[2]</ExecutionFlowlink>
+<TaskTitle>//div[@id='user-task-context']//span[contains(text(),'[New]')]</TaskTitle>
 <ModTaskTitle>//div[@id='user-task-context']//span[contains(text(),'[Modify]')]</ModTaskTitle>
+<InflightTaskTitle>//div[@id='user-task-context']//span[contains(text(),'[In-flight New]')]</InflightTaskTitle>
 <Workitems>//a[text()='Work Items']</Workitems>
 <Scheduler>//a[text()='Scheduler']</Scheduler>
 <Errors>//a[text()='Errors']</Errors>
