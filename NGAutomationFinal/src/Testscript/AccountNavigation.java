@@ -1,7 +1,6 @@
 package Testscript;
 import org.testng.annotations.Test;
 import Driver.DriverTestcase;
-import Reporter.ExtentTestManager;
 
 
 public class AccountNavigation extends DriverTestcase {	
