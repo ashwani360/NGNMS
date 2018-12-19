@@ -34,13 +34,13 @@ public class DriverTestcase {
 	
 	public static LoginHelper Login;
 	public static AccountNavigationHelper NavigationHelper;
-//	public static AccountNavigationHelper SiebelNavigationHelper;
 	public static CompositeOrderHelper CompositeOrderhelper;
+	//public static AccountNavigationHelper SiebelNavigationHelper;
+	public static SiebelOrderHelper SiebelOrderhelper;
 	public static NewHubOrderHelper NewHubOrderhelper;
 	public static ModifyOrderHelper ModifyOrderhelper;
 	public static CeaseOrderHelper CeaseOrderhelper;
 	public static CarNorOrderHelper CarNorOrderhelper;
-	public static SiebelOrderHelper SiebelOrderhelper;
 	public static SiebelModifyHelper SiebelModifyhelper;
 	public static SiebelCeaseOrderHelper SiebelCeaseOrderhelper;
 	public static SiebelNcIntegrationHelper SiebelNcIntegrationHelper;
@@ -48,12 +48,14 @@ public class DriverTestcase {
 	public static String CircuitRefnumber;
 	public static String ModifiedCircuitRefnumber;
 	public static String ModifiedSiebelOrdernumber;
+	
+	//public static CarNorOrderHelper CarNorOrderhelper;
 	public ThreadLocal<String> TestName=new ThreadLocal(); 
 	public static int  itr;
 	@BeforeMethod
-	   public void BeforeMethod(Method method,ITestContext ctx,Object[] data) throws IOException{
-	 
-	 
+	 public void BeforeMethod(Method method,ITestContext ctx,Object[] data) throws IOException{
+		 
+		 
 		Object[] st = null;
 		
 		try 
@@ -143,7 +145,6 @@ public class DriverTestcase {
 	      	Log.info(ctx.getAttribute("testName").toString());
 	}
 
-
 	@BeforeTest
 	public void setup() throws IOException
 	{
@@ -182,16 +183,16 @@ public class DriverTestcase {
 		Login=new LoginHelper(getwebdriver());
 		NavigationHelper= new AccountNavigationHelper(getwebdriver());
 		CompositeOrderhelper=new CompositeOrderHelper(getwebdriver());
-//		SiebelNavigationHelper= new AccountNavigationHelper(getwebdriver());
+		//SiebelNavigationHelper= new AccountNavigationHelper(getwebdriver());
 		SiebelOrderhelper=new SiebelOrderHelper(getwebdriver());
 		SiebelModifyhelper=new SiebelModifyHelper(getwebdriver());
 		NewHubOrderhelper=new NewHubOrderHelper(getwebdriver());
 		ModifyOrderhelper=new ModifyOrderHelper(getwebdriver());
 		CeaseOrderhelper= new CeaseOrderHelper(getwebdriver());
+		SiebelCeaseOrderhelper= new SiebelCeaseOrderHelper(getwebdriver());
 		CarNorOrderhelper=new CarNorOrderHelper(getwebdriver());
 		SiebelNcIntegrationHelper=new SiebelNcIntegrationHelper(getwebdriver());
-		SiebelCeaseOrderhelper=new SiebelCeaseOrderHelper(getwebdriver());
-
+		//CarNorOrderhelper=new CarNorOrderHelper(getwebdriver());
 	}
 
 	@org.testng.annotations.BeforeSuite
