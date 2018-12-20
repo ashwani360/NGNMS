@@ -45,6 +45,7 @@ public class DriverHelper {
 	public static String CompOrdernumber;
 	public static String EthernetProductOrdernumber;
 	public static String ANTCheck;
+	public static String HubNetworkReference;
 	public static String Errors;
 	public static String SiebelOrdernumber;
 	public static String ServiceOrder;
