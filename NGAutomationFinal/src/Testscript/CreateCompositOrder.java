@@ -38,6 +38,28 @@ public void returntoAccountPages(Method method,ITestResult result) throws Except
 	public void CreateAndProcess(Object[] Data) throws Exception
 	{
 	//Log.info("6");
+	Login.Login("Siebel");
+	if(Data[35+2].toString().equals("P2P"))	{
+		SiebelOrderhelper.CreateSiebelOrder(Data);
+		SiebelOrderhelper.AddEthernetLineSiteA(Data);
+		SiebelOrderhelper.AddEthernetLineSiteBAddress(Data);
+		SiebelOrderhelper.ASiteCustomize(Data);
+		SiebelOrderhelper.BSiteCustomize(Data);
+		SiebelOrderhelper.Workflow(Data);
+		}
+	else if(Data[35+2].toString().equals("HUB"))
+		{
+		SiebelOrderhelper.CreateSiebelOrder(Data);
+		SiebelOrderhelper.AddProductEthernetHub(Data);
+		}
+	else if(Data[35+2].toString().equals("Spoke"))
+		{
+
+		SiebelOrderhelper.CreateSiebelOrder(Data);
+		SiebelOrderhelper.AddProductEthernetSpoke(Data);
+		}
+	Login.Logout("Siebel");
+	Login.Login("NC");
 //		4. Click on New Composite order and in the screen displayed Enter a description and click on Update.
 	CompositeOrderhelper.CreatCompositOrder(Data);
 //		5. Navigate to Orders tab and click on Add button.
@@ -69,11 +91,13 @@ public void returntoAccountPages(Method method,ITestResult result) throws Except
 //		26. Now click on Edit button and set Cabinet id as 43 and Cabinet type as Existing Colt cabinet & click on Update button.
 	CompositeOrderhelper.ProductDeviceDetails(Data);
 //		27. Navigate to Customer account, search for the composite order, select it and click Start Processing button on the top.
-	CompositeOrderhelper.ProcessOrder(Data);
 //		28. Now click on the order and move to Tasks tab..
 //		29. Now click on the Execution flow link and in the screen set Access network element search for AR10.BLB and set Access Port as Gigabit/Ethernet/0/0/0/37 and click on Complete button.
 //		30. Do the above step for B end as well with Access network element search as AR10.BLB and Access port as 43 and click the Complete button.
 //		31. Navigate to Tasks and click the OAM profile order and set the OAM profile as L1_MEG_MEP and click the Complete button.
-	CompositeOrderhelper.CompleteOrder(Data);
+	CompositeOrderhelper.ProcessOrder(Data);
+	Login.Logout("NC");
+	Login.Login("Siebel");
+	SiebelOrderhelper.OrderCompleteEthernetLine();
 	}
 }
