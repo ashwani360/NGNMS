@@ -32,7 +32,7 @@ public class SiebelCeaseOrder extends DriverTestcase {
 	SiebelCeaseOrderhelper.Workflow(data);
 	
 	}
-@Test(dataProviderClass=DataReader.class,dataProvider="SiebelData")
+@Test(dataProviderClass=DataReader.class,dataProvider="SiebelCeaseOrder")
 public void OrderComplete(String in1,String in2,String in3,String in4,String in5,String in6,String in7) throws Exception
 {
 	
