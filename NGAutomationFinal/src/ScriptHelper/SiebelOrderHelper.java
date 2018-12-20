@@ -46,9 +46,9 @@ public class SiebelOrderHelper extends DriverHelper{
 //		Clickon(getwebelement(xml.getlocator("//locators/AccountName")));
 //		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on AccountName");
 //		SendKeys(getwebelement(xml.getlocator("//locators/OCNfield")),Inputdata[3].toString());
-//      ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Enter OCN field");
+//        ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Enter OCN field");
 //		Clickon(getwebelement(xml.getlocator("//locators/GoButton")));
-//      ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on GoButton");
+//        ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on GoButton");
 //		Clickon(getwebelement(xml.getlocator("//locators/AccountName")));
 //		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on AccountName");
 		Thread.sleep(30000);
@@ -906,12 +906,10 @@ public class SiebelOrderHelper extends DriverHelper{
 		Clickon(getwebelement(xml.getlocator("//locators/ClickOrderNo")));
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Order No");
 		Thread.sleep(30000);
-//		Clickon(getwebelement(xml.getlocator("//locators/DropDown")));
-//		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Drop down");
-//		Clickon(getwebelement(xml.getlocator("//locators/InstallationAndTestTab")));
-		Select(getwebelement(xml.getlocator("//locators/DropDown")),"Installation and Test");
+		Clickon(getwebelement(xml.getlocator("//locators/DropDown")));
+		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Drop down");
+		Clickon(getwebelement(xml.getlocator("//locators/InstallationAndTestTab")));
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Installation And Test Tab");
-		Thread.sleep(10000);
 		SendKeys(getwebelement(xml.getlocator("//locators/PrimaryTestingMethod")),"Not Required");
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Enter Primary Testing Method");
 		getwebelement(xml.getlocator("//locators/OrderStatus")).clear();
