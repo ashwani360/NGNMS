@@ -1,5 +1,8 @@
 package Testscript;
+import java.lang.reflect.Method;
+
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
 
 import Driver.DataReader;
 import Driver.DriverTestcase;
