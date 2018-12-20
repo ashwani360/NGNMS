@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locators>
-<Accounts>//a[text()='Accounts']</Accounts>
+<Accounts>//a[@data-tabindex='tabScreen2']</Accounts>
 <AccountAdministration>//a[text()='Accounts Administration']</AccountAdministration>
 <AccountsDropdown>//div[@class="siebui-btn-grp-search"]//span[@class="siebui-icon-dropdown applet-form-combo applet-list-combo"]</AccountsDropdown>
 <SelectAccountNo>//li[text()='Account Number (#)']</SelectAccountNo>
 <InputAccountNo>//input[@aria-labelledby="QuerySrchSpec_Label"]</InputAccountNo>
-<AccountGoButton>//input[@aria-labelledby="QuerySrchSpec_Label"]/following-sibling::*</AccountGoButton>
+<AccountGoButton>//div[@class="AppletButtons siebui-applet-buttons"]//button[@title="Accounts:Go"]</AccountGoButton>
 <OCNfield>//input[@aria-label='Account Number(OCN)']</OCNfield>
 <GoButton>//span[text()='Go']</GoButton>
-<AccountName>//a[text()='ZZZZ ES TEST12']</AccountName>
+<AccountName>//a[text()='ZZZZ ES TEST']</AccountName>
 <InstalledAssetNew>//*[@id="s_1_1_34_0_Ctrl"]</InstalledAssetNew>
 <OpportunityNo>//*[(@aria-labelledby='Opportunity_Number_Label')]</OpportunityNo>
 <RequestReceivedDate>//*[(@aria-label='Request Received Date')]</RequestReceivedDate>
@@ -89,7 +89,6 @@
 <ThirdPartyAccessProviderSelect>//table[@summary="Select Third Party Access Provider"]/tbody/tr[2]</ThirdPartyAccessProviderSelect>
 <ThirdPartyAccessProviderSubmit>//button[@title="Select Third Party Access Provider:OK"]</ThirdPartyAccessProviderSubmit>
 <AccessTechnologySearch>//div[@class="cxEdit"]//span[@class="siebui-icon-icon_pick "]/img</AccessTechnologySearch>
-<AccessTechnologyInput>//input[@aria-labelledby="PopupQuerySrchspec_Label"]</AccessTechnologyInput>
 <AccessTechnologySelect>//tr[@id="3"]//td[text()='Ethernet over NGN']</AccessTechnologySelect>
 <AccessTechnologySubmit>//button[@title="Select Access Technology:OK"]</AccessTechnologySubmit>
 <CustomerSitePopStatus>//a[contains(@name,'Customer Site Pop Status')]//following-sibling::*//select</CustomerSitePopStatus>
@@ -106,6 +105,9 @@
 <PortRole>//a[contains(@name,'Port Role')]/following-sibling::*//select</PortRole>
 <VLAN>//a[text()='VLAN'][@href="javascript:void(0);"]</VLAN>
 <VlanTagId>//a[contains(@name,'VLAN Tag ID')]/following-sibling::*//input</VlanTagId>
+
+
+
 <PortRoleBEnd>//a[contains(@name,'Port Role')]/following-sibling::*//select</PortRoleBEnd>
 <PresentationInterfaceSearch>//img[@class="siebui-ctrl-img "]</PresentationInterfaceSearch>
 <SelectPresentationInterface>//tr[@id="5"]//td[text()='LC/PC']</SelectPresentationInterface>
@@ -119,6 +121,7 @@
 <EthernetConnectionLink>//a[text()="Ethernet Connection"][@href="javascript:void(0);"]</EthernetConnectionLink>
 <HubSiteLink>//a[text()="Hub Site"]</HubSiteLink>
 <SpokeSiteLink>//a[text()='Spoke Site']</SpokeSiteLink>
+
 <SelectAccessTechnology>//table[@summary="Select Access Technology"]/tbody/tr[2]</SelectAccessTechnology>
 <SubmitAccessTechnology>//button[@title="Select Access Technology:OK"]</SubmitAccessTechnology>
 <DoneEthernetConnection>//button[text()='Done']</DoneEthernetConnection>
