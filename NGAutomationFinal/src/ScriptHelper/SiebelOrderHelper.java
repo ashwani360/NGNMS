@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import com.relevantcodes.extentreports.LogStatus;
 
 import Driver.DriverHelper;
+import Driver.Log;
 import Driver.xmlreader;
 import Reporter.ExtentTestManager;
 
