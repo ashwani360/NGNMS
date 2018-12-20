@@ -166,7 +166,7 @@ public class NewHubOrderHelper extends DriverHelper{
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Workitems Tab");
 		Thread.sleep(10000);
 		for (int k=1; k<=Integer.parseInt(Inputdata[50].toString());k++){
-		waitandclickForworkitemsPresent(xml.getlocator("//locators/Tasks/TaskReadytoComplete"),30);
+		waitandclickForworkitemsPresent(xml.getlocator("//locators/Tasks/TaskReadytoComplete"),60);
 // Task 1: what is the name of this task : Reserve Access Resources
 		Clickon(getwebelement(xml.getlocator("//locators/Tasks/TaskReadytoComplete")));
 		CompletHubworkitem(GetText2(getwebelement(xml.getlocator("//locators/Tasks/TaskTitle"))),Inputdata);
@@ -356,7 +356,7 @@ public class NewHubOrderHelper extends DriverHelper{
 	case "Set/Validate Serial Number":
 	{
 		Clickon(getwebelement(xml.getlocator("//locators/Tasks/TaskTitle")));
-		ANTCheck=GetText(getwebelement(xml.getlocator("//locators/Tasks/SerialTaskName")));
+		ANTCheck=GetText(getwebelement(xml.getlocator("//locators/Tasks/ANTSerialNumber")));
 		Log.info(ANTCheck);
 		if (ANTCheck.equalsIgnoreCase("New ANT"))
 		{
@@ -615,7 +615,7 @@ public class NewHubOrderHelper extends DriverHelper{
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Click on Workitems Tab");
 		Thread.sleep(5000);
 		for (int k=1; k<=Integer.parseInt(Inputdata[51].toString());k++){
-			waitandclickForworkitemsPresent(xml.getlocator("//locators/Tasks/TaskReadytoComplete"),30);
+			waitandclickForworkitemsPresent(xml.getlocator("//locators/Tasks/TaskReadytoComplete"),60);
 			// Task 1: what is the name ofthis task : Reserve Access Resources
 			Clickon(getwebelement(xml.getlocator("//locators/Tasks/TaskReadytoComplete")));
 			CompletSpokeworkitem(GetText2(getwebelement(xml.getlocator("//locators/Tasks/TaskTitle"))),Inputdata);
@@ -627,7 +627,7 @@ public class NewHubOrderHelper extends DriverHelper{
 		Thread.sleep(10000);
 		waitandclickForOrderCompleted("//a/span[contains(text(),'"+arrOfStr[1]+"')]/parent::*/parent::*/following-sibling::td[contains(text(),'Process Completed')]",60);
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Waiting for Spoke Order to be Completed");
-		Geturl(SpokeOrderscreenURL);
+		Geturl(OrderscreenURL);
 		Clickon(getwebelement(xml.getlocator("//locators/Accountbredcrumb")));
 		ExtentTestManager.getTest().log(LogStatus.PASS, " Step: Navigate to Composite Orders Tab");
 		Clickon(getwebelement(xml.getlocator("//locators/AccountNameSorting")));
@@ -774,9 +774,9 @@ public class NewHubOrderHelper extends DriverHelper{
 	case "Set/Validate Serial Number":
 	{
 		Clickon(getwebelement(xml.getlocator("//locators/Tasks/TaskTitle")));
-		ANTCheck=GetText(getwebelement(xml.getlocator("//locators/Tasks/SerialTaskName")));
+		ANTCheck=GetText(getwebelement(xml.getlocator("//locators/Tasks/ANTSerialNumber")));
 		Log.info(ANTCheck);
-			if (ANTCheck.contains("New ANT"))
+			if (ANTCheck.equalsIgnoreCase("New ANT"))
 			{
 				Clickon(getwebelement(xml.getlocator("//locators/Tasks/UpdateAntSerialNumber")));
 			}
